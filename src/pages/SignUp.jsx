@@ -1,14 +1,17 @@
 import React from "react";
 import facebook from "../assets/facebook.svg";
-import Logo from "../assets/signup_logo.svg"
+import Logo from "../assets/signup_logo.svg";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
     <div className="flex min-h-full">
       <div className="flex-1 hidden lg:flex bg-[#121228] justify-center  flex-col">
         <div className="pl-[5.4%] pr-[4.6%] mb-28 flex items-center">
-          <img src={Logo} alt="" className=""/>
-          <span className="text-xl font-bold text-white ml-4 block">i Connect</span>
+          <img src={Logo} alt="" className="" />
+          <span className="text-xl font-bold text-white ml-4 block">
+            i Connect
+          </span>
         </div>
 
         <div className="pl-[5.4%] pr-[4.6%]">
@@ -27,7 +30,6 @@ const SignUp = () => {
             feugiat.
           </p>
         </div>
-        
       </div>
 
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -44,12 +46,12 @@ const SignUp = () => {
           <span className=" lg:inline-block hidden mx-3"> | </span>
           <span className=" inline-block mr-8">Aleady have an account? </span>
 
-          <a
-            href="#"
+          <Link
+            to="/signin"
             className="font-bold leading-6 text-[#00D871] hover:text-[#00d870c8] hover:border-[#00d87087] border-2 border-[#00D871] p-2 rounded-xl"
           >
             Log in
-          </a>
+          </Link>
         </p>
 
         <div className="lg:flex  lg:mx-[10%] lg:max-w-[80%] justify-between">
