@@ -83,14 +83,7 @@ const SignUpC = () => {
               >
                 Password
               </label>
-              <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-semibold text-[#00D871] hover:text-[#00d870c8]"
-                >
-                  Forgot password?
-                </a>
-              </div>
+           
             </div>
             <div className="mt-2">
               <input

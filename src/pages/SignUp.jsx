@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import facebook from "../assets/facebook.svg";
 import Logo from "../assets/signup_logo.svg";
 import SignUpC from "../components/SignUp.component";
-import NewPassword from "../components/NewPassword.component";
-import Verification from "../components/Verification.component";
-import ForgotPassword from "../components/ForgotPassword.component";
 
 const SignUp = () => {
-  const [page, setpage] = useState(1);
+  
+
   return (
     <div className="flex min-h-full ">
       <div className="flex-1 hidden lg:flex bg-[#121228] justify-center  flex-col min-h-screen">
@@ -35,15 +33,9 @@ const SignUp = () => {
           </p>
         </div>
       </div>
-      {page === 1 ? (
-        <ForgotPassword setpage={() => setpage(1)} />
-      ) : page === 2 ? (
-        <NewPassword setpage={() => setpage(2)} />
-      ) : page === 3 ? (
-        <Verification setpage={() => setpage(3)} />
-      ) : (
-        <SignUpC setpage={() => setpage(4)} />
-      )}
+      
+        <SignUpC />
+      
     </div>
   );
 };

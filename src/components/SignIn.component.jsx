@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import GoogleButton from "../components/Button/GoogleButton";
 
-const SignInC = () => {
+export default function SignInC({ fwd }) {
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:max-w-sm lg:max-w-[80%] lg:mx-[10%]">
@@ -24,6 +25,14 @@ const SignInC = () => {
           Sign Up
         </Link>
       </p>
+
+      <GoogleButton />
+
+      <div class="mt-10 border-b-[1.5px] text-center mx-auto w-full sm:max-w-sm lg:max-w-[80%] border-[#0006]">
+        <div class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2 ">
+          Or
+        </div>
+      </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm lg:max-w-[80%] ">
         <form className="space-y-6" action="#" method="POST">
@@ -52,12 +61,12 @@ const SignInC = () => {
                 Password
               </label>
               <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-semibold text-[#00D871] hover:text-[#00d870c8]"
+                <span
+                  className="font-semibold text-[#00D871] hover:text-[#00d870c8] cursor-pointer"
+                  onClick={() => fwd()}
                 >
                   Forgot password?
-                </a>
+                </span>
               </div>
             </div>
             <div className="mt-2">
@@ -94,6 +103,4 @@ const SignInC = () => {
       </div>
     </div>
   );
-};
-
-export default SignInC;
+}
