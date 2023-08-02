@@ -25,7 +25,7 @@ const SignUpC = () => {
         </Link>
       </p>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm lg:max-w-[80%] ">
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm lg:max-w-[80%]">
         <form className="space-y-6" action="#" method="POST">
           <div>
             <label className="block text-sm leading-6 text-start text-gray-600">

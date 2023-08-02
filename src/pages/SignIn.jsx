@@ -2,10 +2,13 @@ import React from "react";
 import facebook from "../assets/facebook.svg";
 import Logo from "../assets/signup_logo.svg";
 import { Link } from "react-router-dom";
+import GoogleButton from "../components/Button/GoogleButton";
+
+
 
 const SignIn = () => {
   return (
-    <div className="flex min-h-full lg:h-screen">
+    <div className="flex min-h-full ">
       <div className="flex-1 hidden lg:flex bg-[#121228] justify-center  flex-col">
         <div className="pl-[5.4%] pr-[4.6%] mb-28 flex items-center">
           <img src={Logo} alt="" className="" />
@@ -54,8 +57,13 @@ const SignIn = () => {
           </Link>
         </p>
 
-      
-      
+        <GoogleButton/>
+
+        <div class="mt-10 border-b-[1.5px] text-center mx-auto w-full sm:max-w-sm lg:max-w-[80%] border-[#0006]">
+          <div class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2 ">
+            Or
+          </div>
+        </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm lg:max-w-[80%] ">
           <form className="space-y-6" action="#" method="POST">
