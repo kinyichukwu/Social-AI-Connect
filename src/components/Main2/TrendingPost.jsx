@@ -23,7 +23,7 @@ export default function TrendingPost() {
       </div>
 
       {/**grid */}
-      <div className="flex flex-wrap  gap-5 bg-[#f6f6ff] px-32">
+      <div className="flex flex-wrap  gap-5 bg-[#f6f6ff] px-32 h-full">
         {/**col */}
         <div className="flex my-10">
           <div class="bg-white rounded-lg  max-w-[25rem]  p-[1.14rem]">
