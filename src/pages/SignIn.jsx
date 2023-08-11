@@ -14,6 +14,7 @@ const SignIn = () => {
       <div className="flex-1 hidden lg:flex bg-[#121228] justify-center  flex-col">
         <div className="pl-[5.4%] pr-[4.6%] mb-28 flex items-center">
           <img src={Logo} alt="" className="" />
+          
           <span className="text-xl font-bold text-white ml-4 block">
             i Connect
           </span>
