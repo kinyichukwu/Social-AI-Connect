@@ -4,7 +4,7 @@ import mainPostImage from "../../assets/mainpostimage.png";
 export default function TrendingPost() {
   return (
     <>
-      <div className=" w-full  bg-[#fdfdfd] flex ">
+      <div className=" w-full  bg-[#fdfdfd] flex">
         <div className="flex-[34%] border-r p-5">
           <h1 className=" text-xl font-medium text-right">Trending posts</h1>
         </div>
@@ -23,7 +23,7 @@ export default function TrendingPost() {
       </div>
 
       {/**grid */}
-      <div className="flex flex-wrap py-6  gap-5 bg-[#f6f6ff] px-32  items-start ">
+      <div className="flex flex-wrap py-6  gap-5 bg-[#f6f6ff] px-32  items-start  min-h-full ">
         {/**col */}
         <div className="flex my-3">
           <div class="bg-white rounded-lg  max-w-[25rem]  p-[1.14rem]">
@@ -312,6 +312,7 @@ export default function TrendingPost() {
             </div>
           </div>
         </div>
+       
       </div>
     </>
   );
