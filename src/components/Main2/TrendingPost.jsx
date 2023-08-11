@@ -23,9 +23,9 @@ export default function TrendingPost() {
       </div>
 
       {/**grid */}
-      <div className="flex flex-wrap  gap-5 bg-[#f6f6ff] px-32 h-full">
+      <div className="flex flex-wrap py-6  gap-5 bg-[#f6f6ff] px-32  items-start ">
         {/**col */}
-        <div className="flex my-10">
+        <div className="flex my-3">
           <div class="bg-white rounded-lg  max-w-[25rem]  p-[1.14rem]">
             <div class="bg-white rounded-sm max-w-md">
               <img src={mainPostImage} className=" max-h-[15rem] w-full" />
@@ -220,7 +220,7 @@ export default function TrendingPost() {
           </div>
         </div>
         {/**col */}
-        <div className="flex my-10">
+        <div className="flex my-3">
           <div class="bg-white rounded-lg  max-w-[25rem]  p-[1.14rem]">
             <div class="bg-white rounded-sm max-w-md">
               <img src={mainPostImage} className=" max-h-[15rem] w-full" />

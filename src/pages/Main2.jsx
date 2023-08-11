@@ -161,7 +161,7 @@ const Main2 = () => {
             </div>
           </div>
 
-          <UseAiInstagram></UseAiInstagram>
+          <TrendingPost/>
         </div>
       </section>
     </div>
