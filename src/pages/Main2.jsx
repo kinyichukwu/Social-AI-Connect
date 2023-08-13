@@ -28,7 +28,7 @@ const Main2 = () => {
     <div className=" md:h-screen">
       {/**nav bar */}
       <div className="fixed  top-0 z-50  w-full ">
-        <div className="px-[10rem] py-3 flex justify-between items-center bg-white">
+        <div className="px-[6rem] py-3 flex justify-between items-center bg-white">
           <img src={homelogo} alt="" />
 
           <div className="flex ">
