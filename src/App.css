@@ -25,3 +25,9 @@ body::-webkit-scrollbar-track {
 .main-page-overflow::-webkit-scrollbar-track {
   box-shadow: inset 0 0 2px white;
 }
+
+@media (min-width: 800px) {
+  .mainpageMenuHeight {
+    height: calc(100vh - 171.6px);
+  }
+}

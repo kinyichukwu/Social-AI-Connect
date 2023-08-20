@@ -18,6 +18,8 @@ import TrendingPost from "../components/Main2/TrendingPost";
 import InstagramPost from "../components/Main2/InstagramPost";
 import UseAiInstagram from "../components/Main2/UseAiInstagram";
 import { Link } from "react-router-dom";
+import MainPageMenu from "../components/Main2/MainPageMenu";
+import MainPageImageSearch from "../components/Main2/MainPageImageSearch";
 
 const Main2 = () => {
   const [ref1, hovering1] = useHover();
@@ -28,38 +30,38 @@ const Main2 = () => {
     <div className=" md:h-screen">
       {/**nav bar */}
       <div className="fixed  top-0 z-50  w-full ">
-        <div className="px-[6rem] py-3 flex justify-between items-center bg-white">
+        <div className="px-[5rem] py-[0.7rem] flex justify-between items-center bg-white">
           <img src={homelogo} alt="" />
 
-          <div className="flex ">
+          <div className="flex  items-center">
             <Link
               to=""
-              className="text-[#00A455] hover:text-[#1111114a] px-[3.5rem] active:text-[#1111118b]"
+              className="text-[#00A455] hover:text-[#1111114a] text-[13px] pr-[3.3rem] active:text-[#1111118b]"
             >
               Main page
             </Link>
             <Link
               to=""
-              className="text-[#1111118b] hover:text-[#11111141] px-[3.5rem] active:text-[#1111118b]"
+              className="text-[#1111118b] hover:text-[#11111141] text-[13px] pr-[3.3rem] active:text-[#1111118b]"
             >
               Pricing
             </Link>
             <Link
               to=""
-              className="text-[#1111118b] hover:text-[#11111141] px-[3.5rem] active:text-[#1111118b]"
+              className="text-[#1111118b] hover:text-[#11111141] text-[13px] pr-[3.3rem] active:text-[#1111118b]"
             >
               Turorial [ Demo ]
             </Link>
             <Link
               to=""
-              className="text-[#1111118b] hover:text-[#11111141] px-[3.5rem] active:text-[#1111118b]"
+              className="text-[#1111118b] hover:text-[#11111141] text-[13px]  active:text-[#1111118b]"
             >
               Support
             </Link>
           </div>
         </div>
         <div className="py-4 bg-[#0E0E35] px-14 flex justify-between items-center ">
-          <button className="p-[0.62rem] text-white border border-white rounded-xl hover:text-[#ffffff7f] hover:border-[#ffffff7f] active:text-white  active:border-white font-medium">
+          <button className="p-[0.62rem] text-white   rounded-xl hover:text-[#ffffff7f] hover:border-[#ffffff7f] active:text-white  active:border-white font-medium">
             Go back
           </button>
           <button className="py-[1.15rem] px-[1.72rem] text-[#4F4F4F] border border-white rounded-3xl bg-[#E7E7E7] hover:bg-[#e7e7e7c7]  font-medium hover:border-transparent  active:bg-[#E7E7E7] ">
@@ -94,72 +96,15 @@ const Main2 = () => {
           </div>
         </div>
       </div>
-      <section className="flex max-md:flex-col mt-[173.78px] h-full">
-        <div className="w-[22%] h-full max-md:w-full max-md:relative  max-md:h-fit fixed p-5 max-md:p-0 py-4 bg-[#151544] main-page-overflow  overflow-y-auto overflow-x-hidden">
-          <div className=" max-md:mb-0 flex max-md:items-center justify-center mx-1">
-            <div className="hover:bg-[#00ec7aaa] bg-[#00EC7B]  active:bg-[#00ec7aea]  text-white   cursor-pointer rounded-2xl pl-4 pr-9 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center w-fit">
-              <BsPencilFill className="mx-3" /> <p className="mx-3">Create</p>
-            </div>
-          </div>
 
-          <div className=" max-md:mb-0 flex max-md:items-center justify-center w-fit flex-col mx-auto">
-            <div className="mt-6">
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center">
-                <BsCalendarCheck className="mx-2" />{" "}
-                <p className="mx-2">Trending</p>
-              </div>
+      <section className="flex  max-md:flex-col mt-[171.6px] h-full ">
+        <MainPageImageSearch />
 
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center ">
-                <BsCalendarCheck className="mx-2" />{" "}
-                <p className="mx-2">overview</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center">
-                <BsCalendarCheck className="mx-2" />{" "}
-                <p className="mx-2">AI Generated</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center ">
-                <BsCalendarCheck className="mx-2" />{" "}
-                <p className="mx-2">Drafts</p>
-              </div>
-            </div>
-
-            <div className="mt-6">
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center">
-                <BsCalendarCheck className="mx-2" />{" "}
-                <p className="mx-2">Published</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center ">
-                <BsCalendarCheck className="mx-2" />{" "}
-                <p className="mx-2">Campaign</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center ">
-                <BsCalendarCheck className="mx-2" />{" "}
-                <p className="mx-2">Calendar</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center">
-                <BsCalendarCheck className="mx-2" />{" "}
-                <p className="mx-2">Settings</p>
-              </div>
-            </div>
-          </div>
-
-          <div className=" max-md:mb-0 flex max-md:items-center justify-center mt-4 ">
-            <div className="text-[#151544]  bg-[#ffff] cursor-pointer rounded-xl px-2 py-2 mb-2 max-md:text-center flex items-center w-fit hover:bg-[#ffffffb8] active:bg-[#ffffffe1] font-semibold">
-              <p>Help Center</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[78%]  ml-auto max-md:w-full max-md:ml-0 ">
-          <div className="  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
+        <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0 ">
+          <div className="  flex lg:pl-[16rem] justify-center lg:justify-normal items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
             <div className=" pt-6 mr-[1.75rem] cursor-pointer " ref={ref1}>
               <img src={facebook} alt="" className="  w-[1.875rem]  mx-auto" />
-              <p className="text-[#111111]/60 ">facebook</p>
+              <p className="text-[#111111]/60 text-xs">Facebook</p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
                   hovering1 ? "bg-[#00D871]" : "bg - white"
@@ -168,7 +113,7 @@ const Main2 = () => {
             </div>
             <div className=" pt-6 mr-[1.75rem] cursor-pointer" ref={ref2}>
               <img src={Twitter} alt="" className=" w-[1.875rem] mx-auto" />
-              <p className="text-[#111111]/60">Twitter</p>
+              <p className="text-[#111111]/60 text-xs">Twitter</p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
                   hovering2 ? "bg-[#00D871] bg-gradient-to-r " : "bg - white"
@@ -177,7 +122,7 @@ const Main2 = () => {
             </div>
             <div className=" pt-6 mr-[1.75rem] cursor-pointer" ref={ref3}>
               <img src={Instagram} alt="" className=" w-[1.875rem] mx-auto" />
-              <p className="text-[#111111]/60">Instagram</p>
+              <p className="text-[#111111]/60 text-xs">Instagram</p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
                   hovering3 ? "bg-[#00D871]" : "bg - white"
@@ -187,7 +132,7 @@ const Main2 = () => {
             <div className=" pt-6 mr-[1.75rem] cursor-pointer" ref={ref4}>
               {" "}
               <img src={Linkdin} alt="" className=" w-[1.875rem] mx-auto" />
-              <p className="text-[#111111]/60">LinkedIn</p>
+              <p className="text-[#111111]/60 text-xs">LinkedIn</p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
                   hovering4 ? "bg-[#00D871]" : "bg - white"
@@ -196,7 +141,7 @@ const Main2 = () => {
             </div>
           </div>
 
-          <TrendingPost />
+          <UseAiInstagram />
         </div>
       </section>
     </div>
