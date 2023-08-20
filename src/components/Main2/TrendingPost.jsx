@@ -312,7 +312,6 @@ export default function TrendingPost() {
             </div>
           </div>
         </div>
-       
       </div>
     </>
   );
