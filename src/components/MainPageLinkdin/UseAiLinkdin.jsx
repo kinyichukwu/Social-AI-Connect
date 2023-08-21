@@ -106,10 +106,12 @@ const UseAiLinkdin = () => {
               />
             </svg>
           </div>
-
-
         </div>
         <div className=" w-[34rem] px-[2.25rem] py-[1.62rem] bg-white drop-shadow-md shadow-sm  rounded-2xl">
+          <h1 className="mb-[1.25rem] opacity-80 text-slate-900 text-base font-semibold ">
+            Add a descriptive title to your documents
+          </h1>
+
           <div className="border rounded-3xl border-[#0000002a] p-5">
             <input
               className="w-full outline-none text-[#121228c5] font-medium overflow-hidden"
@@ -179,14 +181,14 @@ const UseAiLinkdin = () => {
                   <div className="w-3 h-3 left-[63px] top-[10px] absolute cursor-pointer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
                       fill="none"
                     >
                       <path
-                        d="M21 17H26.5L21 11.5V17ZM14 10H22L28 16V28C28 28.5304 27.7893 29.0391 27.4142 29.4142C27.0391 29.7893 26.5304 30 26 30H14C12.89 30 12 29.1 12 28V12C12 10.89 12.89 10 14 10ZM23 26V24H14V26H23ZM26 22V20H14V22H26Z"
-                        fill="#07BD65"
+                        d="M9 3.60429L8.39571 3L6 5.39571L3.60429 3L3 3.60429L5.39571 6L3 8.39571L3.60429 9L6 6.60429L8.39571 9L9 8.39571L6.60429 6L9 3.60429Z"
+                        fill="#151544"
                       />
                     </svg>
                   </div>

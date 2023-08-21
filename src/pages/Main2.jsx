@@ -15,6 +15,7 @@ import MainPageMenu from "../components/MainPageInstagram/MainPageMenu";
 import MainPageImageSearch from "../components/MainPageInstagram/MainPageImageSearch";
 import CreateSchedulePost from "../components/MainPageInstagram/CreateSchedulePost";
 import UseAiLinkdin from "../components/MainPageLinkdin/UseAiLinkdin";
+import CreateSchedulePostLinkdin from "../components/MainPageLinkdin/CreateSchedulePostLinkdin";
 
 // components Linkdin
 
@@ -138,7 +139,7 @@ const Main2 = () => {
             </div>
           </div>
 
-          <UseAiLinkdin />
+          <CreateSchedulePostLinkdin />
         </div>
       </section>
     </div>
