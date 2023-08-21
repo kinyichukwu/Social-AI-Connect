@@ -16,7 +16,7 @@ export default function UseAiInstagram() {
           <img src={image} alt="" className="translate-y-[-12px]" />
           <img src={video} alt="" className=" translate-y-[-33px]" />
         </div>
-        <div className="min-w-[55%] w-[34rem] px-[2.25rem] py-[1.62rem] bg-white drop-shadow-md  rounded-3xl">
+        <div className=" w-[34rem] px-[2.25rem] py-[1.62rem] bg-white drop-shadow-md  rounded-3xl">
           <div className="border rounded-3xl border-[#0000002a] p-5">
             <textarea className="w-full outline-none text-[#121228c5] font-medium h-36 overflow-hidden"></textarea>
             {hashTag && (

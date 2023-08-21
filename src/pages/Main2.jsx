@@ -6,14 +6,17 @@ import homelogo from "../assets/Main2/HomeLogo.png";
 import { useHover } from "@uidotdev/usehooks";
 import { Link } from "react-router-dom";
 
-// components
-import TrendingPost from "../components/Main2/TrendingPost";
-import InstagramPost from "../components/Main2/InstagramPost";
-import UseAiInstagram from "../components/Main2/UseAiInstagram";
+// components Instagram
+import TrendingPost from "../components/MainPageInstagram/TrendingPost";
+import InstagramPost from "../components/MainPageInstagram/InstagramPost";
+import UseAiInstagram from "../components/MainPageInstagram/UseAiInstagram";
 
-import MainPageMenu from "../components/Main2/MainPageMenu";
-import MainPageImageSearch from "../components/Main2/MainPageImageSearch";
-import CreateSchedulePost from "../components/Main2/CreateSchedulePost";
+import MainPageMenu from "../components/MainPageInstagram/MainPageMenu";
+import MainPageImageSearch from "../components/MainPageInstagram/MainPageImageSearch";
+import CreateSchedulePost from "../components/MainPageInstagram/CreateSchedulePost";
+import UseAiLinkdin from "../components/MainPageLinkdin/UseAiLinkdin";
+
+// components Linkdin
 
 const Main2 = () => {
   const [ref1, hovering1] = useHover();
@@ -94,7 +97,7 @@ const Main2 = () => {
       <section className="flex  max-md:flex-col mt-[171.6px] h-full ">
         <MainPageMenu />
 
-        <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0 ">
+        <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0">
           <div className="  flex lg:pl-[16rem] justify-center lg:justify-normal items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
             <div className=" pt-6 mr-[1.75rem] cursor-pointer " ref={ref1}>
               <img src={facebook} alt="" className="  w-[1.875rem]  mx-auto" />
@@ -135,7 +138,7 @@ const Main2 = () => {
             </div>
           </div>
 
-          <CreateSchedulePost />
+          <UseAiLinkdin />
         </div>
       </section>
     </div>
