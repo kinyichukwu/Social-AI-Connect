@@ -2,6 +2,10 @@ import { useState } from "react";
 import image from "../../assets/Main2/add image.svg";
 import video from "../../assets/Main2/add video.svg";
 import GreenButton from "../Button/GreenButton";
+import image1 from "../../assets/Main2/asset1.png";
+import image2 from "../../assets/Main2/asset2.png";
+import image3 from "../../assets/Main2/asset3.png";
+import image4 from "../../assets/Main2/asset4.png";
 
 export default function UseAiInstagram() {
   const [hashTag, sethashTag] = useState(false);
@@ -26,8 +30,59 @@ export default function UseAiInstagram() {
             )}
           </div>
 
+          {hashTag && (
+            <>
+              <div className="flex space-x-2 flex-wrap mt-6">
+                <div
+                  className="w-[86px] h-[86px] relative rounded-[20px] bg-gray-100 bg-no-repeat bg-center bg-contain"
+                  style={{ backgroundImage: `url("${image2}")` }}
+                >
+                  <div className="w-[15px] h-[15px] left-[61px] top-[8px] absolute bg-white rounded-full" />
+                  <div className="w-3 h-3 left-[63px] top-[10px] absolute cursor-pointer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <path
+                        d="M9 3.60429L8.39571 3L6 5.39571L3.60429 3L3 3.60429L5.39571 6L3 8.39571L3.60429 9L6 6.60429L8.39571 9L9 8.39571L6.60429 6L9 3.60429Z"
+                        fill="#151544"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div
+                  className="w-[86px] h-[86px] relative rounded-[20px] bg-gray-100 bg-no-repeat bg-center bg-contain"
+                  style={{ backgroundImage: `url("${image4}")` }}
+                >
+                  <div className="w-[15px] h-[15px] left-[61px] top-[8px] absolute bg-white rounded-full" />
+                  <div className="w-3 h-3 left-[63px] top-[10px] absolute cursor-pointer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                    >
+                      <path
+                        d="M9 3.60429L8.39571 3L6 5.39571L3.60429 3L3 3.60429L5.39571 6L3 8.39571L3.60429 9L6 6.60429L8.39571 9L9 8.39571L6.60429 6L9 3.60429Z"
+                        fill="#151544"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
           <div className="flex justify-between mt-6">
-            <div className=" bg-[#151544] h-[3.875rem] w-[3.875rem] rounded-3xl flex justify-center items-center cursor-pointer hover:bg-[#1515449d] active:bg-[#151544]" onClick={() => sethashTag(prev => !prev)}>
+            <div
+              className=" bg-[#151544] h-[3.875rem] w-[3.875rem] rounded-3xl flex justify-center items-center cursor-pointer hover:bg-[#1515449d] active:bg-[#151544]"
+              onClick={() => sethashTag((prev) => !prev)}
+            >
               <div className="content text-white text-3xl font-medium ">#</div>
             </div>
 

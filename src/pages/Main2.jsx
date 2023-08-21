@@ -1,25 +1,19 @@
-import {
-  BsCalendarCheck,
-  BsPencil,
-  BsPencilFill,
-  BsSearch,
-} from "react-icons/bs";
 import Instagram from "../assets/Instagram.png";
 import Linkdin from "../assets/Linkdin.png";
 import Twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook.svg";
-import search from "../assets/search.png";
-import mainPostImage from "../assets/mainpostimage.png";
 import homelogo from "../assets/Main2/HomeLogo.png";
 import { useHover } from "@uidotdev/usehooks";
+import { Link } from "react-router-dom";
 
 // components
 import TrendingPost from "../components/Main2/TrendingPost";
 import InstagramPost from "../components/Main2/InstagramPost";
 import UseAiInstagram from "../components/Main2/UseAiInstagram";
-import { Link } from "react-router-dom";
+
 import MainPageMenu from "../components/Main2/MainPageMenu";
 import MainPageImageSearch from "../components/Main2/MainPageImageSearch";
+import CreateSchedulePost from "../components/Main2/CreateSchedulePost";
 
 const Main2 = () => {
   const [ref1, hovering1] = useHover();
@@ -98,7 +92,7 @@ const Main2 = () => {
       </div>
 
       <section className="flex  max-md:flex-col mt-[171.6px] h-full ">
-        <MainPageImageSearch />
+        <MainPageMenu />
 
         <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0 ">
           <div className="  flex lg:pl-[16rem] justify-center lg:justify-normal items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
@@ -141,7 +135,7 @@ const Main2 = () => {
             </div>
           </div>
 
-          <UseAiInstagram />
+          <CreateSchedulePost />
         </div>
       </section>
     </div>
