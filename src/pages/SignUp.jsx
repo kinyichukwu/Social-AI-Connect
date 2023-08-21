@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import facebook from "../assets/facebook.svg";
 import Logo from "../assets/signup_logo.svg";
 import SignUpC from "../components/SignUp.component";
-import NewPassword from "../components/NewPassword.component";
-import Verification from "../components/Verification.component";
-import ForgotPassword from "../components/ForgotPassword.component";
 
 const SignUp = () => {
+  
+
   return (
     <div className="flex min-h-full ">
       <div className="flex-1 hidden lg:flex bg-[#121228] justify-center  flex-col min-h-screen">
@@ -34,8 +33,9 @@ const SignUp = () => {
           </p>
         </div>
       </div>
-
-      <ForgotPassword />
+      
+        <SignUpC />
+      
     </div>
   );
 };

@@ -25,7 +25,7 @@ const SignUpC = () => {
         </Link>
       </p>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm lg:max-w-[80%] ">
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm lg:max-w-[80%]">
         <form className="space-y-6" action="#" method="POST">
           <div>
             <label className="block text-sm leading-6 text-start text-gray-600">
@@ -83,14 +83,7 @@ const SignUpC = () => {
               >
                 Password
               </label>
-              <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-semibold text-[#00D871] hover:text-[#00d870c8]"
-                >
-                  Forgot password?
-                </a>
-              </div>
+           
             </div>
             <div className="mt-2">
               <input

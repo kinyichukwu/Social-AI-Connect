@@ -1,13 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LeftArrow from "../assets/arrow-left.svg";
 
-
-const ForgotPassword = () => {
+const ForgotPassword = ({ fwd, bck }) => {
+  const navigate = useNavigate();
   return (
     <div className="flex min-h-full flex-1 flex-col px-6 py-8 lg:px-8 justify-center">
       <div className=" lg:max-w-[80%] lg:mx-[10%] flex mt-10 ">
-        <img src={LeftArrow} alt="" className="" />
+        <img
+          src={LeftArrow}
+          alt=""
+          className=" cursor-pointer"
+          onClick={() => bck()}
+        />
         <h2 className=" text-4xl font-bold leading-9 tracking-tight text-gray-900 text-center flex-auto">
           Forgot Password
         </h2>
@@ -38,6 +43,7 @@ const ForgotPassword = () => {
           <div>
             <button
               type="submit"
+              onClick={() => fwd()}
               className="flex w-full justify-center rounded-md bg-[#00D871] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#00d870c8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00d870c8]"
             >
               Rest Password
@@ -52,7 +58,7 @@ const ForgotPassword = () => {
 
           <div>
             <button
-              type="submit"
+              onClick={() => navigate("/signup")}
               className="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-bold leading-6 text-[#00D871] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00d870c8] border-[#00D871] border hover:shadow-md shadow-[#00D871]"
             >
               Sign up

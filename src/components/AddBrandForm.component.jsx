@@ -87,7 +87,7 @@ const addBrandForm = <div class="w-[928px] h-[1202px] absolute bg-white rounded-
 
 
     <div class="w-[196px] h-20 pt-5 left-[623px] top-[1076px] absolute justify-center items-center inline-flex">
-        <div class="w-[196px] self-stretch px-10 py-2.5 bg-emerald-500 rounded-[11px] justify-center items-center gap-2.5 inline-flex">
+        <div class="w-[196px] self-stretch px-10 py-2.5 bg-[#00CB6A] rounded-[11px] justify-center items-center gap-2.5 inline-flex">
             <button onClick={()=>{setSubmit(true),setBrand([...brand,<Brand></Brand>])}}>
      
   <div class="justify-start items-center flex">

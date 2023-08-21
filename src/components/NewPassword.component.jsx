@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NewPassword = () => {
+const NewPassword = ({setpage}) => {
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:max-w-sm lg:max-w-[80%] lg:mx-[10%]">
