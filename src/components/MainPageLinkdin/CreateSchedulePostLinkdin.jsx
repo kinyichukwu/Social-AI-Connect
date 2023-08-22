@@ -11,23 +11,7 @@ import { MdPublish } from "react-icons/md";
 const CreateSchedulePostLinkdin = () => {
   return (
     <>
-      <div className=" w-full  bg-[#fdfdfd] flex">
-        <div className="flex-[34%] border-r p-5">
-          <h1 className=" text-xl font-medium text-right">Recent posts</h1>
-        </div>
-        <div className="flex-[66%] p-5">
-          {/**search */}
-          <div className=" h-11 w-80 bg-[#f6f6f6] rounded-3xl flex items-center ">
-            <img src={search} alt="" className="px-4" />
-
-            <input
-              type="text"
-              placeholder="search"
-              className="bg-[#f6f6f6] text-[#4F4F4F]"
-            />
-          </div>
-        </div>
-      </div>
+   
 
       {/**grid */}
       <div className="h-screen bg-[#f6f6ff]">
