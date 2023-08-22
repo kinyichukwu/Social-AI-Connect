@@ -87,7 +87,7 @@ const CreateSchedulePostLinkdin = () => {
                 </div>
               </div>
 
-              <div className="flex justify-between mt-5 space-x-1">
+              <div className="flex justify-between mt-5 space-x-3">
                 <div className="flex items-center justify-center border border-[#07BD65] rounded-2xl p-[0.55rem] w-full space-x-[0.1rem] cursor-pointer">
                   <PiClipboardTextFill size={25} className=" text-green-500" />
 
