@@ -10,13 +10,21 @@ import image4 from "../../assets/Main2/asset4.png";
 export default function UseAiInstagram() {
   const [hashTag, sethashTag] = useState(false);
   return (
-    <div className="px-[2%] py-[4.3%] bg-[#F6F6FF] h-full">
-      <div className="flex items-start">
-        <div className="flex flex-col ">
-          <img src={image} alt="" className="translate-y-[-12px]" />
-          <img src={video} alt="" className=" translate-y-[-33px]" />
+    <div className="md:px-8 px-5 py-14 bg-[#F6F6FF] h-full">
+      <div className="flex items-start justify-center lg:flex-row flex-col-reverse h-full">
+        <div className="flex lg:flex-col flex-row">
+          <img
+            src={image}
+            alt=""
+            className="lg:translate-y-[-12px] lg:translate-x-[0] translate-x-[-23px] "
+          />
+          <img
+            src={video}
+            alt=""
+            className=" lg:translate-y-[-33px] lg:translate-x-[0] translate-x-[-33px]"
+          />
         </div>
-        <div className=" w-[34rem] px-[2.25rem] py-[1.62rem] bg-white drop-shadow-md  rounded-3xl">
+        <div className=" lg:w-[34rem] w-full md:px-[2.1rem] px-[1rem] py-[1.62rem] bg-white md:drop-shadow-md  rounded-3xl">
           <div className="border rounded-3xl border-[#0000002a] p-5">
             <textarea className="w-full outline-none text-[#121228c5] font-medium h-36 overflow-hidden"></textarea>
             {hashTag && (
@@ -78,21 +86,30 @@ export default function UseAiInstagram() {
             </>
           )}
 
-          <div className="flex justify-between mt-6">
+          <div className="flex justify-between md:mt-6 mt-[2.25rem]">
             <div
-              className=" bg-[#151544] h-[3.875rem] w-[3.875rem] rounded-3xl flex justify-center items-center cursor-pointer hover:bg-[#1515449d] active:bg-[#151544]"
+              className=" bg-[#151544] md:h-[3.875rem] md:w-[3.875rem]  h-[3rem] w-[3rem] rounded-2xl flex justify-center items-center cursor-pointer hover:bg-[#1515449d] active:bg-[#151544]"
               onClick={() => sethashTag((prev) => !prev)}
             >
-              <div className="content text-white text-3xl font-medium ">#</div>
+              <div className="content text-white md:text-3xl text-[1.1rem] font-medium ">
+                #
+              </div>
             </div>
 
-            <button className=" rounded-lg text-[#07BD65] border-[1.7px] border-[#07BD65] p-3 text-xl font-medium w-36 h-[3.3rem] hover:border-[#07bd65ac] hover:text-[#07bd65a0]  active:border-[#07bd65] active:text-[#07bd65]">
+            <button
+              className="
+             rounded-lg text-[#07BD65] border-[1.7px] border-[#07BD65] md:p-3 p-[0.62rem] md:text-xl text-md text-center
+             font-medium md:w-36 w-[7.5rem] md:h-[3.3rem] h-[3rem]
+              hover:border-[#07bd65ac]  hover:text-[#07bd65a0] active:border-[#07bd65] active:text-[#07bd65]"
+            >
               Done
             </button>
           </div>
         </div>
-        <div className="flex ml-6">
-          <GreenButton text="Use AI" />
+        <div className="flex lg:ml-6 lg:w-fit lg:mt-0 mt-5 w-full ">
+          <button className="py-3 px-6 my-5 lg:my-0  text-white bg-[#07BD65] rounded-2xl text-base font-medium  hover:bg-[#07bd65d4] active:bg-[#07bd65] w-full lg:w-fit">
+            Use AI
+          </button>
         </div>
       </div>
     </div>

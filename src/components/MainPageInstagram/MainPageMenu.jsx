@@ -10,7 +10,7 @@ const MainPageMenu = () => {
         </div>
       </div>
 
-      <div className=" max-md:mb-0 font-medium flex max-md:items-center justify-center w-fit flex-col mx-auto ">
+      <div className=" max-md:mb-0 font-normal flex max-md:items-center justify-center w-fit flex-col mx-auto ">
         <div className="mt-6">
           <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-[#00ec7aea]   cursor-pointer rounded-2xl px-6 py-2 mb-2 max-md:rounded-none max-md:text-center flex items-center">
             <BsCalendarCheck className="mr-2" />{" "}

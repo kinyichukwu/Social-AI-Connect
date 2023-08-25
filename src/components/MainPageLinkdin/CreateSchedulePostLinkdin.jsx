@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import search from "../../assets/search.png";
 import mainPostImage from "../../assets/mainpostimage.png";
@@ -11,12 +9,10 @@ import { MdPublish } from "react-icons/md";
 const CreateSchedulePostLinkdin = () => {
   return (
     <>
-   
-
       {/**grid */}
       <div className="h-screen bg-[#f6f6ff]">
         {" "}
-        <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-8  lg:px-32 items-start   ">
+        <div className="flex flex-wrap py-6  pt-8  gap-9 md:px-8 items-start justify-center  ">
           {/**col */}
           <div className="flex space-x-[2.5rem]">
             <div className="flex  flex-col">
@@ -95,9 +91,9 @@ const CreateSchedulePostLinkdin = () => {
                 </div>
               </div>
             </div>
-
-            
           </div>
+
+
         </div>
       </div>
     </>

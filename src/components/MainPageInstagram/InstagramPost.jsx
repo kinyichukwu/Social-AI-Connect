@@ -1,7 +1,7 @@
 export default function InstagramPost() {
   return (
-    <div className="px-[8rem]  bg-[#f6f6ff] md:min-h-screen">
-      <div className="max-w-[35rem] pt-14 pb-10">
+    <div className="md:px-8 px-4  bg-[#f6f6ff] md:min-h-screen">
+      <div className=" pt-12 pb-10 hidden md:block">
         <h1 className=" text-[1.43rem] font-extrabold text-[#121228] text-center">
           Post to Instagram
         </h1>
@@ -10,14 +10,25 @@ export default function InstagramPost() {
           gravida sit elementum dui eget nunc.{" "}
         </p>
       </div>
-      <div className="flex flex-wrap  gap-[2.63rem] pb-5">
-        <div className=" text-[1.2rem] text-[#151544b1] bg-white p-16 rounded-[1.25rem] font-semibold drop-shadow-sm shadow-sm">
+      <div className="flex flex-wrap  md:gap-[2.63rem] gap-[2.12rem] pb-5 justify-center md:flex-row flex-col pt-[6.87rem] md:pt-0">
+        <div
+          className=" md:text-[1.2rem] text-[1rem] text-[#151544b1] bg-white md:p-16  p-[1.1rem]
+                         rounded-[1.25rem] font-semibold drop-shadow-sm shadow-sm md:border-0 border-[#151544] border-[2px] md:text-start text-center"
+        >
           Post
-        </div>
-        <div className=" text-[1.2rem] text-[#151544b1]  bg-white p-16 rounded-[1.25rem] font-semibold drop-shadow-sm shadow-sm">
+        </div>{" "}
+        <div
+          className=" md:text-[1.2rem] text-[1rem] text-[#151544b1] bg-white md:p-16  p-[1.1rem]
+                       rounded-[1.25rem] font-semibold drop-shadow-sm shadow-sm md:border-0 border-[#151544] border-[2px] md:text-start text-center"
+        >
+          {" "}
           Reel
         </div>
-        <div className=" text-[1.2rem] text-[#151544b1]  bg-white p-16 rounded-[1.25rem] font-semibold drop-shadow-sm shadow-sm">
+        <div
+          className=" md:text-[1.2rem] text-[1rem] text-[#151544b1] bg-white md:p-16  p-[1.1rem]
+                       rounded-[1.25rem] font-semibold drop-shadow-sm shadow-sm md:border-0 border-[#151544] border-[2px] md:text-start text-center"
+        >
+          {" "}
           Story
         </div>
       </div>
