@@ -27,7 +27,7 @@ export default function TrendingPost() {
       {/**mobile */}
 
       {/**grid */}
-      <div className="h-screen bg-[#f6f6ff]">
+      <div className="min-h-screen bg-[#f6f6ff]">
         {" "}
         <div className="flex flex-wrap py-6  pt-8  gap-9  lg:px-8 px-[1rem] justify-center  items-start">
           {/**col */}
