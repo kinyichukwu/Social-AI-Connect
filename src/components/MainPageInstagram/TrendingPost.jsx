@@ -6,7 +6,7 @@ export default function TrendingPost() {
   return (
     <>
       {/**dextop */}
-      <div className=" w-full  bg-[#fdfdfd] flex  hidden md:flex">
+      <div className=" w-full  bg-[#fdfdfd]  hidden md:flex">
         <div className="flex-[34%] border-r p-5">
           <h1 className=" text-xl font-medium text-right">Recent posts</h1>
         </div>
