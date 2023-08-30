@@ -10,8 +10,8 @@ import image4 from "../../assets/Main2/asset4.png";
 export default function UseAiInstagram() {
   const [hashTag, sethashTag] = useState(false);
   return (
-    <div className="md:px-8 px-5 py-14 bg-[#F6F6FF] h-full">
-      <div className="flex items-start justify-center lg:flex-row flex-col-reverse h-full">
+    <div className="md:px-8 px-5 py-14 bg-[#F6F6FF] h-full min-h-screen">
+      <div className="flex items-start md:justify-end lg:justify-center lg:flex-row flex-col-reverse h-full">
         <div className="flex lg:flex-col flex-row">
           <img
             src={image}

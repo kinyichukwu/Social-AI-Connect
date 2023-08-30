@@ -128,8 +128,8 @@ export default function TrendingPost() {
               </div>
             </div>
 
-            <div className="flex lg:flex-col flex-row">
-              <div className="p-2 bg-[#151544] inline-block rounded-3xl h-fit m-[0.68rem]  lg:w-fit w-full cursor-pointer">
+            <div className="flex lg:flex-col flex-row gap-[0.68rem]">
+              <div className="p-2 bg-[#151544] inline-block rounded-3xl h-fit lg:mx-[0.68rem]  lg:my-0 my-[0.68rem]  lg:w-fit w-full cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="38"
@@ -145,7 +145,7 @@ export default function TrendingPost() {
                 </svg>
               </div>
 
-              <div className="p-2 bg-[#151544] inline-block rounded-3xl h-fit  m-[0.68rem]  lg:w-fit w-full cursor-pointer">
+              <div className="p-2 bg-[#151544] inline-block rounded-3xl h-fit  lg:mx-[0.68rem]  lg:my-0 my-[0.68rem]  lg:w-fit w-full cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="38"

@@ -29,7 +29,7 @@ const MainPageImageSearch = () => {
         </span>
       </div>
 
-      <div className="flex flex-wrap gap-[0.75rem]">
+      <div className="flex flex-wrap gap-[0.75rem] justify-center">
         <div className="  w-[128px] h-[12rem] flex justify-center items-center rounded-3xl bg-white ">
           <img src={image2} alt="" className="" />
         </div>

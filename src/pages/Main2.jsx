@@ -183,27 +183,54 @@ const Main2 = () => {
 
         <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0">
           <div className="  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
-            <div className=" pt-6 mr-[1.75rem] cursor-pointer " ref={ref1}>
-              <img src={facebook} alt="" className="  w-[1.875rem]  mx-auto" />
-              <p className="text-[#111111]/60 text-xs">Facebook</p>
+            <div
+              className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer "
+              ref={ref1}
+            >
+              <img
+                src={facebook}
+                alt=""
+                className="md:w-[1.875rem] w-[1.6rem] mx-auto"
+              />
+              <p className="text-[#111111]/60 md:text-xs text-[0.6rem] ">
+                Facebook
+              </p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
                   hovering1 ? "bg-[#00D871]" : "bg - white"
                 } rounded-md`}
               ></div>
             </div>
-            <div className=" pt-6 mr-[1.75rem] cursor-pointer" ref={ref2}>
-              <img src={Twitter} alt="" className=" w-[1.875rem] mx-auto" />
-              <p className="text-[#111111]/60 text-xs">Twitter</p>
+            <div
+              className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer"
+              ref={ref2}
+            >
+              <img
+                src={Twitter}
+                alt=""
+                className="md:w-[1.875rem] w-[1.6rem] mx-auto"
+              />
+              <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
+                Twitter
+              </p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
                   hovering2 ? "bg-[#00D871] bg-gradient-to-r " : "bg - white"
                 } rounded-md`}
               ></div>
             </div>
-            <div className=" pt-6 mr-[1.75rem] cursor-pointer" ref={ref3}>
-              <img src={Instagram} alt="" className=" w-[1.875rem] mx-auto" />
-              <p className="text-[#111111]/60 text-xs">Instagram</p>
+            <div
+              className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer"
+              ref={ref3}
+            >
+              <img
+                src={Instagram}
+                alt=""
+                className="md:w-[1.875rem] mx-auto w-[1.6rem]"
+              />
+              <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
+                Instagram
+              </p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
                   hovering3 ? "bg-[#00D871]" : "bg - white"
@@ -212,8 +239,14 @@ const Main2 = () => {
             </div>
             <div className=" pt-6 cursor-pointer" ref={ref4}>
               {" "}
-              <img src={Linkdin} alt="" className=" w-[1.875rem] mx-auto" />
-              <p className="text-[#111111]/60 text-xs">LinkedIn</p>
+              <img
+                src={Linkdin}
+                alt=""
+                className="md:w-[1.875rem] w-[1.6rem] mx-auto"
+              />
+              <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
+                LinkedIn
+              </p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
                   hovering4 ? "bg-[#00D871]" : "bg - white"
@@ -222,7 +255,7 @@ const Main2 = () => {
             </div>
           </div>
 
-          <TrendingPost />
+          <UseAiInstagram />
         </div>
       </section>
     </div>

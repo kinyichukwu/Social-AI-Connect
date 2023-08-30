@@ -1,6 +1,6 @@
 export default function InstagramPost() {
   return (
-    <div className="md:px-8 px-4  bg-[#f6f6ff] md:min-h-screen">
+    <div className="md:px-8 px-4  bg-[#f6f6ff] min-h-screen">
       <div className=" pt-12 pb-10 hidden md:block">
         <h1 className=" text-[1.43rem] font-extrabold text-[#121228] text-center">
           Post to Instagram
