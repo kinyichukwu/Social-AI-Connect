@@ -20,6 +20,8 @@ export default function TrendingPost() {
               placeholder="search"
               className="bg-[#f6f6f6] text-[#4F4F4F]"
             />
+
+            
           </div>
         </div>
       </div>
