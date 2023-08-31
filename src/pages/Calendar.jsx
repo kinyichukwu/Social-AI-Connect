@@ -20,8 +20,78 @@ import search from "../assets/search.png";
 import mainPostImage from "../assets/mainpostimage.png";
 import profile from "../assets/Main2/profile.jpg";
 import calenderImage from "../assets/calender/calenderImage.png";
+import calenderIconButton from "../assets/calender/calenderIconMenu.png";
+import leftIcon from "../assets/calender/leftIcon.svg";
+import rightIcon from "../assets/calender/rightIcon.svg";
 
 import { useState } from "react";
+
+function SchedulePost() {
+  return (
+    <div className="">
+      <div className=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
+        {/**inner */}
+        <div className="bg-[#fff] h-full rounded-xl">
+          <div className="flex flex-col gap-[0.81rem]">
+            <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
+              1
+            </div>
+            <div className=" text-center  text-[1rem] font-medium">
+              4 scheduled
+            </div>
+          </div>
+
+          <div className="flex flex-col mt-[1.2rem] py-[1.25rem] px-[1rem] justify-between ">
+            <div className="h-[9rem] w-[9rem]">
+              <img
+                className="w-full bg-cover rounded-2xl"
+                alt=""
+                src={calenderImage}
+              />
+            </div>
+
+            <div className=" text-center my-[0.75rem] text-[0.875rem]">
+              <span className=" font-semibold">Dictumst scelerisque </span>
+              <span className=" font-normal">
+                gravida sit elemen maecenas feugiat
+              </span>
+            </div>
+            <div className=" text-center text-[0.89rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
+              9:20 AM -2:30PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+function ShowSchedulePost() {
+  return (
+    <div className="">
+      <div className=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
+        {/**inner */}
+        <div className="bg-[#fff] h-full rounded-xl">
+          <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
+            1
+          </div>
+
+          <div className="flex flex-col mt-[2.8rem] ">
+            <div className=" flex py-[0.86rem] px-[1.17rem]">
+              <div className="relative">
+                <span className="absolute">7</span>
+                <img src={facebook} alt="" />
+              </div>
+            </div>
+
+            <div className=" text-center text-[0.8rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
+              9:20 AM -2:30PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const Calendar = () => {
   const [ref1, hovering1] = useHover();
@@ -179,162 +249,126 @@ const Calendar = () => {
         <MainPageMenu showNav={showNav} />
 
         <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0">
-          <div className="  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
-            <div
-              className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer "
-              ref={ref1}
-            >
-              <img
-                src={facebook}
-                alt=""
-                className="md:w-[1.875rem] w-[1.6rem] mx-auto"
-              />
-              <p className="text-[#111111]/60 md:text-xs text-[0.6rem] ">
-                Facebook
-              </p>
-              <div
-                className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                  hovering1 ? "bg-[#00D871]" : "bg - white"
-                } rounded-md`}
-              ></div>
-            </div>
-            <div
-              className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer"
-              ref={ref2}
-            >
-              <img
-                src={Twitter}
-                alt=""
-                className="md:w-[1.875rem] w-[1.6rem] mx-auto"
-              />
-              <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
-                Twitter
-              </p>
-              <div
-                className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                  hovering2 ? "bg-[#00D871] bg-gradient-to-r " : "bg - white"
-                } rounded-md`}
-              ></div>
-            </div>
-            <div
-              className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer"
-              ref={ref3}
-            >
-              <img
-                src={Instagram}
-                alt=""
-                className="md:w-[1.875rem] mx-auto w-[1.6rem]"
-              />
-              <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
-                Instagram
-              </p>
-              <div
-                className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                  hovering3 ? "bg-[#00D871]" : "bg - white"
-                } rounded-md`}
-              ></div>
-            </div>
-            <div className=" pt-6 cursor-pointer" ref={ref4}>
-              {" "}
-              <img
-                src={Linkdin}
-                alt=""
-                className="md:w-[1.875rem] w-[1.6rem] mx-auto"
-              />
-              <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
-                LinkedIn
-              </p>
-              <div
-                className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                  hovering4 ? "bg-[#00D871]" : "bg - white"
-                } rounded-md`}
-              ></div>
-            </div>
-          </div>
-
           {/**edit trending post */}
 
           {/**dextop menu*/}
-          <div className=" w-full  bg-[#fdfdfd]  hidden md:flex items-center">
-            <div className="flex-[34%] border-r flex space-x-1">
-              <h1 className=" text-xl font-medium text-right">All Calendar</h1>
+          <div className=" w-full  bg-[#fdfdfd]  hidden md:flex items-center h-[5.9375rem] drop-shadow-md shadow-sm">
+            <div className="flex-[34%] border-r flex flex-col justify-between h-full">
+              <div className={``}></div>
+
+              <div className="flex justify-center space-x-3">
+                <img src={calenderIconButton} alt="" />
+                <h1 className=" text-xl font-medium text-right">
+                  All Calendar
+                </h1>
+              </div>
+
+              <div
+                className={` w-full h-[0.4rem] ${"bg-[#00D871]"} rounded-md`}
+              ></div>
             </div>
-            <div className="flex-[66%] ">
-              <div className="  flex justify-center items-center ">
+            <div className="flex-[66%] h-full pt-[1.2rem]">
+              <div className="  flex justify-center items-center h-full ">
                 <div
-                  className="md:mr-[1.75rem] mr-[1.43rem] cursor-pointer "
+                  className="md:mr-[1.75rem] mr-[1.43rem] cursor-pointer flex flex-col justify-between h-full "
                   ref={ref1}
                 >
-                  <img
-                    src={facebook}
-                    alt=""
-                    className="md:w-[1.875rem] w-[1.6rem] mx-auto"
-                  />
-                  <p className="text-[#111111]/60 md:text-xs text-[0.6rem] ">
-                    Facebook
-                  </p>
+                  <div></div>
+                  <div>
+                    <img
+                      src={facebook}
+                      alt=""
+                      className="md:w-[1.875rem] w-[1.6rem] mx-auto"
+                    />
+                    <p className="text-[#111111]/60 md:text-xs text-[0.6rem] mt-3">
+                      Facebook
+                    </p>
+                  </div>
+
                   <div
-                    className={`mt-[0.2rem] w-full h-[0.4rem] ${
+                    className={` w-full h-[0.4rem] ${
                       hovering1 ? "bg-[#00D871]" : "bg - white"
                     } rounded-md`}
                   ></div>
                 </div>
                 <div
-                  className="  md:mr-[1.75rem] mr-[1.43rem] cursor-pointer"
+                  className="md:mr-[1.75rem] mr-[1.43rem] cursor-pointer flex flex-col justify-between h-full "
                   ref={ref2}
                 >
-                  <img
-                    src={Twitter}
-                    alt=""
-                    className="md:w-[1.875rem] w-[1.6rem] mx-auto"
-                  />
-                  <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
-                    Twitter
-                  </p>
+                  <div></div>
+                  <div>
+                    <img
+                      src={Twitter}
+                      alt=""
+                      className="md:w-[1.875rem] w-[1.6rem] mx-auto"
+                    />
+                    <p className="text-[#111111]/60 md:text-xs text-[0.6rem] mt-3">
+                      Twitter
+                    </p>
+                  </div>
+
                   <div
-                    className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                      hovering2
-                        ? "bg-[#00D871] bg-gradient-to-r "
-                        : "bg - white"
+                    className={` w-full h-[0.4rem] ${
+                      hovering2 ? "bg-[#00D871]" : "bg - white"
                     } rounded-md`}
                   ></div>
                 </div>
                 <div
-                  className="  md:mr-[1.75rem] mr-[1.43rem] cursor-pointer"
+                  className="md:mr-[1.75rem] mr-[1.43rem] cursor-pointer flex flex-col justify-between h-full "
                   ref={ref3}
                 >
-                  <img
-                    src={Instagram}
-                    alt=""
-                    className="md:w-[1.875rem] mx-auto w-[1.6rem]"
-                  />
-                  <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
-                    Instagram
-                  </p>
+                  <div></div>
+                  <div>
+                    <img
+                      src={Instagram}
+                      alt=""
+                      className="md:w-[1.875rem] w-[1.6rem] mx-auto"
+                    />
+                    <p className="text-[#111111]/60 md:text-xs text-[0.6rem] mt-3">
+                      Instagram
+                    </p>
+                  </div>
+
                   <div
-                    className={`mt-[0.2rem] w-full h-[0.4rem] ${
+                    className={` w-full h-[0.4rem] ${
                       hovering3 ? "bg-[#00D871]" : "bg - white"
                     } rounded-md`}
                   ></div>
                 </div>
-                <div className=" cursor-pointer" ref={ref4}>
-                  {" "}
-                  <img
-                    src={Linkdin}
-                    alt=""
-                    className="md:w-[1.875rem] w-[1.6rem] mx-auto"
-                  />
-                  <p className="text-[#111111]/60 md:text-xs text-[0.6rem]">
-                    LinkedIn
-                  </p>
+                <div
+                  className="md:mr-[1.75rem] mr-[1.43rem] cursor-pointer flex flex-col justify-between h-full "
+                  ref={ref4}
+                >
+                  <div></div>
+                  <div>
+                    <img
+                      src={Linkdin}
+                      alt=""
+                      className="md:w-[1.875rem] w-[1.6rem] mx-auto"
+                    />
+                    <p className="text-[#111111]/60 md:text-xs text-[0.6rem] mt-3">
+                      LinkedIn
+                    </p>
+                  </div>
+
                   <div
-                    className={`mt-[0.2rem] w-full h-[0.4rem] ${
+                    className={` w-full h-[0.4rem] ${
                       hovering4 ? "bg-[#00D871]" : "bg - white"
                     } rounded-md`}
                   ></div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="flex justify-center items-center space-x-10 py-5">
+            <img src={leftIcon} alt=""></img>
+            <div className="text-[1rem] p-[0.62rem] bg-[#F8F8F8] rounded-full">
+              {" "}
+              <span className=" font-semibold text-[#151544]">July</span>{" "}
+              <span className="text-[#15154446]">2023</span>{" "}
+            </div>
+            <img src={rightIcon} alt=""></img>
           </div>
 
           {/**mobile and dextop */}
@@ -345,157 +379,17 @@ const Calendar = () => {
             <div className=" bg-[#fff] rounded-lg">
               <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-[3.31rem] md:py-[3.44rem] px-[1rem] justify-center  items-start">
                 {/**col */}
-                <div className="">
-                  <div class=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
-                    {/**inner */}
-                    <div className="bg-[#fff] h-full rounded-xl">
-                      <div className="flex flex-col gap-[0.81rem]">
-                        <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
-                          1
-                        </div>
-                        <div className=" text-center  text-[1rem] font-medium">
-                          4 scheduled
-                        </div>
-                      </div>
-
-                      <div className="flex flex-col mt-[1.2rem] py-[1.25rem] px-[1rem] justify-between ">
-                        <div className="h-[9rem] w-[9rem]">
-                          <img
-                            className="w-full bg-cover rounded-2xl"
-                            alt=""
-                            src={calenderImage}
-                          />
-                        </div>
-
-                        <div className=" text-center my-[0.75rem] text-[0.875rem]">
-                          <span className=" font-semibold">
-                            Dictumst scelerisque{" "}
-                          </span>
-                          <span className=" font-normal">
-                            gravida sit elemen maecenas feugiat
-                          </span>
-                        </div>
-                        <div className=" text-center text-[0.89rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
-                          9:20 AM -2:30PM
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ShowSchedulePost />
                 {/**col */}
-                <div className="">
-                  <div class=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
-                    {/**inner */}
-                    <div className="bg-[#fff] h-full rounded-xl">
-                      <div className="flex flex-col gap-[0.81rem]">
-                        <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
-                          1
-                        </div>
-                        <div className=" text-center  text-[1rem] font-medium">
-                          4 scheduled
-                        </div>
-                      </div>
-
-                      <div className="flex flex-col mt-[1.2rem] py-[1.25rem] px-[1rem] justify-between ">
-                        <div className="h-[9rem] w-[9rem]">
-                          <img
-                            className="w-full bg-cover rounded-2xl"
-                            alt=""
-                            src={calenderImage}
-                          />
-                        </div>
-
-                        <div className=" text-center my-[0.75rem] text-[0.875rem]">
-                          <span className=" font-semibold">
-                            Dictumst scelerisque{" "}
-                          </span>
-                          <span className=" font-normal">
-                            gravida sit elemen maecenas feugiat
-                          </span>
-                        </div>
-                        <div className=" text-center text-[0.89rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
-                          9:20 AM -2:30PM
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ShowSchedulePost />
                 {/**col */}
-                <div className="">
-                  <div class=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
-                    {/**inner */}
-                    <div className="bg-[#fff] h-full rounded-xl">
-                      <div className="flex flex-col gap-[0.81rem]">
-                        <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
-                          1
-                        </div>
-                        <div className=" text-center  text-[1rem] font-medium">
-                          4 scheduled
-                        </div>
-                      </div>
-
-                      <div className="flex flex-col mt-[1.2rem] py-[1.25rem] px-[1rem] justify-between ">
-                        <div className="h-[9rem] w-[9rem]">
-                          <img
-                            className="w-full bg-cover rounded-2xl"
-                            alt=""
-                            src={calenderImage}
-                          />
-                        </div>
-
-                        <div className=" text-center my-[0.75rem] text-[0.875rem]">
-                          <span className=" font-semibold">
-                            Dictumst scelerisque{" "}
-                          </span>
-                          <span className=" font-normal">
-                            gravida sit elemen maecenas feugiat
-                          </span>
-                        </div>
-                        <div className=" text-center text-[0.89rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
-                          9:20 AM -2:30PM
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <SchedulePost />
                 {/**col */}
-                <div className="">
-                  <div class=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
-                    {/**inner */}
-                    <div className="bg-[#fff] h-full rounded-xl">
-                      <div className="flex flex-col gap-[0.81rem]">
-                        <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
-                          1
-                        </div>
-                        <div className=" text-center  text-[1rem] font-medium">
-                          4 scheduled
-                        </div>
-                      </div>
-
-                      <div className="flex flex-col mt-[1.2rem] py-[1.25rem] px-[1rem] justify-between ">
-                        <div className="h-[9rem] w-[9rem]">
-                          <img
-                            className="w-full bg-cover rounded-2xl"
-                            alt=""
-                            src={calenderImage}
-                          />
-                        </div>
-
-                        <div className=" text-center my-[0.75rem] text-[0.875rem]">
-                          <span className=" font-semibold">
-                            Dictumst scelerisque{" "}
-                          </span>
-                          <span className=" font-normal">
-                            gravida sit elemen maecenas feugiat
-                          </span>
-                        </div>
-                        <div className=" text-center text-[0.89rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
-                          9:20 AM -2:30PM
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <SchedulePost />
+                {/**col */}
+                <SchedulePost />
+                {/**col */}
+                <SchedulePost />
               </div>
             </div>
           </div>
