@@ -65,25 +65,106 @@ function SchedulePost() {
     </div>
   );
 }
+
 function ShowSchedulePost() {
   return (
     <div className="">
       <div className=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
         {/**inner */}
         <div className="bg-[#fff] h-full rounded-xl">
-          <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
+          <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544] mb-[2.24rem]">
             1
           </div>
 
-          <div className="flex flex-col mt-[2.8rem] ">
-            <div className=" flex py-[0.86rem] px-[1.17rem]">
-              <div className="relative">
-                <span className="absolute">7</span>
-                <img src={facebook} alt="" />
-              </div>
+          <div className="flex mt-[0.56rem] space-x-[1.15rem] items-center py-[0.86rem] px-[0.3rem] rounded-3xl shadow-sm shadow-[#00000046]">
+            <div className="relative">
+              <span className="absolute text-[0.64rem] top-[-5px] right-[-5px] text-white bg-[#CE0C00] rounded-full px-[0.29rem]">
+                9
+              </span>
+              <img src={facebook} alt="" />
             </div>
 
-            <div className=" text-center text-[0.8rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
+            <div className=" text-center text-[0.8rem] p-[0.54rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
+              9:20 AM -2:30PM
+            </div>
+          </div>
+          <div className="flex mt-[0.56rem] space-x-[1.15rem] items-center py-[0.86rem] px-[0.3rem] rounded-3xl shadow-sm shadow-[#00000046]">
+            <div className="relative">
+              <span className="absolute text-[0.64rem] top-[-5px] right-[-5px] text-white bg-[#CE0C00] rounded-full px-[0.29rem]">
+                9
+              </span>
+              <img src={Instagram} alt="" />
+            </div>
+
+            <div className=" text-center text-[0.8rem] p-[0.54rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
+              9:20 AM -2:30PM
+            </div>
+          </div>
+          <div className="flex mt-[0.56rem] space-x-[1.15rem] items-center py-[0.86rem] px-[0.3rem] rounded-3xl shadow-sm shadow-[#00000046]">
+            <div className="relative">
+              <span className="absolute text-[0.64rem] top-[-5px] right-[-5px] text-white bg-[#CE0C00] rounded-full px-[0.29rem]">
+                9
+              </span>
+              <img src={Linkdin} alt="" />
+            </div>
+
+            <div className=" text-center text-[0.8rem] p-[0.54rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
+              9:20 AM -2:30PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function NoSchedulePost() {
+  return (
+    <div className="">
+      <div className=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
+        {/**inner */}
+        <div className="bg-[#fff] h-full rounded-xl">
+          <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544] mb-[2.24rem]">
+            1
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+function EditSchedulePost() {
+  return (
+    
+    <div className="">
+      <div className="py-[0.54rem] px-[0.96rem] rounded-full bg-[#151544] text-white mb-3 w-fit">9</div>
+      <div className=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
+        {/**inner */}
+        <div className="bg-[#fff] h-full rounded-xl">
+          <div className="flex flex-col gap-[0.81rem]">
+            <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
+              1
+            </div>
+            <div className=" text-center  text-[1rem] font-medium">
+              4 scheduled
+            </div>
+          </div>
+
+          <div className="flex flex-col mt-[1.2rem] py-[1.25rem] px-[1rem] justify-between ">
+            <div className="h-[9rem] w-[9rem]">
+              <img
+                className="w-full bg-cover rounded-2xl"
+                alt=""
+                src={calenderImage}
+              />
+            </div>
+
+            <div className=" text-center my-[0.75rem] text-[0.875rem]">
+              <span className=" font-semibold">Dictumst scelerisque </span>
+              <span className=" font-normal">
+                gravida sit elemen maecenas feugiat
+              </span>
+            </div>
+            <div className=" text-center text-[0.89rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
               9:20 AM -2:30PM
             </div>
           </div>
@@ -378,18 +459,8 @@ const Calendar = () => {
             {" "}
             <div className=" bg-[#fff] rounded-lg">
               <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-[3.31rem] md:py-[3.44rem] px-[1rem] justify-center  items-start">
-                {/**col */}
-                <ShowSchedulePost />
-                {/**col */}
-                <ShowSchedulePost />
-                {/**col */}
-                <SchedulePost />
-                {/**col */}
-                <SchedulePost />
-                {/**col */}
-                <SchedulePost />
-                {/**col */}
-                <SchedulePost />
+              
+                <EditSchedulePost />
               </div>
             </div>
           </div>
