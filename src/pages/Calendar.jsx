@@ -19,6 +19,7 @@ import MainPageImageSearch from "../components/MainPageInstagram/MainPageImageSe
 import search from "../assets/search.png";
 import mainPostImage from "../assets/mainpostimage.png";
 import profile from "../assets/Main2/profile.jpg";
+import calenderImageEdit from "../assets/calender/calenderImageEdit.png";
 import calenderImage from "../assets/calender/calenderImage.png";
 import calenderIconButton from "../assets/calender/calenderIconMenu.png";
 import leftIcon from "../assets/calender/leftIcon.svg";
@@ -133,40 +134,85 @@ function NoSchedulePost() {
   );
 }
 function EditSchedulePost() {
+  const [menu, setmenu] = useState(false);
   return (
-    
     <div className="">
-      <div className="py-[0.54rem] px-[0.96rem] rounded-full bg-[#151544] text-white mb-3 w-fit">9</div>
-      <div className=" rounded-3xl  items-center w-[13.1rem] h-[26rem]  px-[0.75rem] py-[0.5rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
-        {/**inner */}
-        <div className="bg-[#fff] h-full rounded-xl">
-          <div className="flex flex-col gap-[0.81rem]">
-            <div className=" text-center w-full bg-[#E8E8FF] rounded-3xl text-[1rem] text-[#151544]">
-              1
-            </div>
-            <div className=" text-center  text-[1rem] font-medium">
-              4 scheduled
-            </div>
+      <div className="py-[0.54rem] px-[0.96rem] rounded-full bg-[#151544] text-white mb-3 w-fit">
+        9
+      </div>
+      <div className=" rounded-3xl  items-center w-[13rem] h-[25rem]  px-[0.75rem] py-[1rem] drop-shadow-sm shadow border border-[#8b8b8b] bg-[#8b8b8b08]">
+        <div className="flex justify-between items-center relative">
+          <p className=" text-[0.81rem] text-[#1111118b] font-normal">Post</p>
+          <div
+            className="flex flex-col items-center justify-between space-y-[0.31rem] w-[2.36rem] h-[1.1rem] cursor-pointer"
+            onClick={() => setmenu((prev) => !prev)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="3"
+              height="3"
+              viewBox="0 0 3 3"
+              fill="none"
+            >
+              <circle cx="1.5" cy="1.5" r="1.5" fill="#474747" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="3"
+              height="3"
+              viewBox="0 0 3 3"
+              fill="none"
+            >
+              <circle cx="1.5" cy="1.5" r="1.5" fill="#474747" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="3"
+              height="3"
+              viewBox="0 0 3 3"
+              fill="none"
+            >
+              <circle cx="1.5" cy="1.5" r="1.5" fill="#474747" />
+            </svg>
           </div>
 
-          <div className="flex flex-col mt-[1.2rem] py-[1.25rem] px-[1rem] justify-between ">
-            <div className="h-[9rem] w-[9rem]">
-              <img
-                className="w-full bg-cover rounded-2xl"
-                alt=""
-                src={calenderImage}
-              />
+          {menu && (
+            <div className="absolute w-[7.7rem]  rounded-xl bg-[#FFF] flex flex-col space-y-[1.5rem] py-[1.25rem] px-[1rem] top-[28px] right-0">
+              <p className="text-[0.81rem] text-[#151544] font-medium hover:text-[#151544a0] active:text-[#151544] cursor-pointer">
+                Edit
+              </p>
+              <p className="text-[0.81rem] text-[#151544] font-medium hover:text-[#151544a0] active:text-[#151544] cursor-pointer">
+                Publish Now
+              </p>
+              <p className="text-[0.81rem] text-[#151544] font-medium hover:text-[#151544a0] active:text-[#151544] cursor-pointer">
+                Reschedule
+              </p>
+              <p className="text-[0.81rem] text-[#151544] font-medium hover:text-[#151544a0] active:text-[#151544] cursor-pointer">
+                View Preview
+              </p>
+              <p className="text-[0.81rem] text-[#F00] font-medium hover:text-[#ff00008f] active:text-[#F00] cursor-pointer">
+                Delete
+              </p>
             </div>
+          )}
+        </div>
 
-            <div className=" text-center my-[0.75rem] text-[0.875rem]">
-              <span className=" font-semibold">Dictumst scelerisque </span>
-              <span className=" font-normal">
-                gravida sit elemen maecenas feugiat
-              </span>
-            </div>
-            <div className=" text-center text-[0.89rem] p-[0.59rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129]">
-              9:20 AM -2:30PM
-            </div>
+        <div className="flex flex-col justify-between items-center space-y-[1.06rem] mt-[1.06rem]">
+          <img
+            src={calenderImageEdit}
+            alt=""
+            className="h-[12.5rem] w-[12.5rem]"
+          />
+          <p className=" opacity-80 text-[0.875rem]">
+            <span className="text-[#111] font-semibold">
+              Dictumst scelerisque
+            </span>{" "}
+            <span className="text-[#121228] font-normal">
+              ut commodo dis. Risus ac tellus sapien gravida sit
+            </span>
+          </p>
+          <div className=" text-center text-[0.8rem] p-[0.54rem] rounded-3xl font-normal text-[#CE0C00] bg-[#FF616129] w-fit">
+            2:30PM
           </div>
         </div>
       </div>
@@ -458,8 +504,17 @@ const Calendar = () => {
           <div className="min-h-screen bg-[#f6f6ff] px-[1.25rem] py-[2.6rem]">
             {" "}
             <div className=" bg-[#fff] rounded-lg">
-              <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-[3.31rem] md:py-[3.44rem] px-[1rem] justify-center  items-start">
-              
+              <div className="flex mx-[3.75rem] pt-[1.8rem] space-x-[1.2rem] items-center">
+                <p className="text-[#151544] text-[1.25rem] font-normal">
+                  Posts scheduled for{" "}
+                  <span className="font-semibold">Friday 3rd</span>
+                </p>{" "}
+                <div className="bg-[#B6B6B6] h-[0.0625rem] flex-1"></div>
+              </div>
+              <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-[3.31rem] md:py-[3.44rem] px-[1rem]   items-start">
+                <EditSchedulePost />
+                <EditSchedulePost />
+                <EditSchedulePost />
                 <EditSchedulePost />
               </div>
             </div>
