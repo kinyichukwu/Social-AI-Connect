@@ -504,18 +504,17 @@ const Calendar = () => {
           <div className="min-h-screen bg-[#f6f6ff] px-[1.25rem] py-[2.6rem]">
             {" "}
             <div className=" bg-[#fff] rounded-lg">
-              <div className="flex mx-[1rem] md:mx-[3.75rem] pt-[1.8rem] space-x-[1.2rem] items-center justify-center md:justify-start">
-                <p className="text-[#151544] text-[0.87rem] md:text-[1.25rem] font-normal text-center">
-                  Posts scheduled for{" "}
-                  <span className="font-semibold">Friday 3rd</span>
-                </p>{" "}
-                <div className="bg-[#B6B6B6] h-[0.0625rem] flex-1"></div>
-              </div>
+       
               <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-[3.31rem] md:py-[3.44rem] px-[1rem] justify-center md:justify-start   items-start">
                 <EditSchedulePost />
                 <EditSchedulePost />
                 <EditSchedulePost />
                 <EditSchedulePost />
+            
+            
+            
+              
+              
               </div>
             </div>
           </div>

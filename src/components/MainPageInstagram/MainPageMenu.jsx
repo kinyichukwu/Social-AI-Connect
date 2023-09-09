@@ -12,43 +12,43 @@ const MainPageMenu = ({showNav}) => {
 
       <div className=" max-md:mb-0 font-normal flex  justify-center w-fit flex-col mx-auto ">
         <div className="mt-6">
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-[#00ec7aea]   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center">
+          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-[#00ec7aea]   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">Your Updates</p>
           </div>
 
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center ">
+          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">Overview</p>
           </div>
 
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center">
+          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">AI Generated</p>
           </div>
 
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center ">
+          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
             <BsCalendarCheck className="mr-2" /> <p className="mx-2">Drafts</p>
           </div>
         </div>
 
         <div className="mt-6">
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center">
+          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">Published</p>
           </div>
 
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center ">
+          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">Campaign</p>
           </div>
 
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center ">
+          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">Calendar</p>
           </div>
 
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center">
+          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">Settings</p>
           </div>

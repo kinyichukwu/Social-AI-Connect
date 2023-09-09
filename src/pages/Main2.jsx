@@ -179,7 +179,7 @@ const Main2 = () => {
       </div>
 
       <section className="flex  max-md:flex-col md:mt-[171.6px] mt-[94px] h-full">
-        <MainPageMenu showNav={showNav} />
+        <MainPageMenu />
 
         <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0">
           <div className="  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
@@ -255,7 +255,7 @@ const Main2 = () => {
             </div>
           </div>
 
-          <TrendingPost />
+          <CreateSchedulePostLinkdin />
         </div>
       </section>
     </div>
