@@ -20,8 +20,6 @@ export default function TrendingPost() {
               placeholder="search"
               className="bg-[#f6f6f6] text-[#4F4F4F]"
             />
-
-            
           </div>
         </div>
       </div>
@@ -51,7 +49,7 @@ export default function TrendingPost() {
                     </p>
                   </div>
                 </div>
-                <img src={mainPostImage} className=" max-h-[15rem] w-full" />
+
                 <div class="flex items-center mt-3 mb-2 justify-center">
                   <div class="flex ">
                     <svg
