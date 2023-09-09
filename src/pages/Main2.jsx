@@ -25,12 +25,21 @@ import UseAiLinkdin from "../components/MainPageLinkdin/UseAiLinkdin";
 import CreateSchedulePostLinkdin from "../components/MainPageLinkdin/CreateSchedulePostLinkdin";
 import { useState } from "react";
 
+const menuA = [
+  "Your Updates",
+  "Overview",
+  "AI Generated",
+  "Drafts",
+  "Published",
+  "Campaign",
+  "Calendar",
+  "Settings",
+];
+
 const Main2 = () => {
-  const [ref1, hovering1] = useHover();
-  const [ref2, hovering2] = useHover();
-  const [ref3, hovering3] = useHover();
-  const [ref4, hovering4] = useHover();
   const [showNav, setshowNav] = useState(true);
+  const [active, setactive] = useState(3);
+  const [page, setpage] = useState(1);
 
   return (
     <div className=" md:h-screen">
@@ -119,54 +128,47 @@ const Main2 = () => {
           }`}
         >
           <div className=" max-md:mb-0 flex max-md:items-center justify-center md:mt-0 mt-[1.55rem]">
-            <div className="hover:bg-[#00ec7aaa] bg-[#00EC7B]  active:bg-[#00ec7aea]  text-white   cursor-pointer rounded-2xl pl-4 pr-9 py-2 mb-2 max-md:text-center flex items-center w-fit">
+            <div
+              onClick={() => {
+                setpage(2);
+                setshowNav(true);
+              }}
+              className="hover:bg-[#00ec7aaa] bg-[#00EC7B]  active:bg-[#00ec7aea]  text-white   cursor-pointer rounded-2xl pl-4 pr-9 py-2 mb-2 max-md:text-center flex items-center w-fit"
+            >
               <BsPencilFill className="mx-3" /> <p className="mx-3">Create</p>
             </div>
           </div>
 
           <div className=" max-md:mb-0 font-normal flex  justify-center w-fit flex-col mx-auto ">
             <div className="mt-6">
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-[#00ec7aea]   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center">
-                <BsCalendarCheck className="mr-2" />{" "}
-                <p className="mx-2">Your Updates</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center ">
-                <BsCalendarCheck className="mr-2" />{" "}
-                <p className="mx-2">Overview</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center">
-                <BsCalendarCheck className="mr-2" />{" "}
-                <p className="mx-2">AI Generated</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center ">
-                <BsCalendarCheck className="mr-2" />{" "}
-                <p className="mx-2">Drafts</p>
-              </div>
+              {menuA.slice(0, Math.floor(menuA.length / 2)).map((menu, i) => {
+                return (
+                  <div
+                    className={`hover:text-[#00ec7aaa]  active:text-[#00ec7aea] ${
+                      i === 0 ? "text-[#00ec7aea]" : "text-white"
+                    }     cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center`}
+                    onClick={() => setshowNav(true)}
+                  >
+                    <BsCalendarCheck className="mr-2" />{" "}
+                    <p className="mx-2">{menu}</p>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="mt-6">
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center">
-                <BsCalendarCheck className="mr-2" />{" "}
-                <p className="mx-2">Published</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center ">
-                <BsCalendarCheck className="mr-2" />{" "}
-                <p className="mx-2">Campaign</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center ">
-                <BsCalendarCheck className="mr-2" />{" "}
-                <p className="mx-2">Calendar</p>
-              </div>
-
-              <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center">
-                <BsCalendarCheck className="mr-2" />{" "}
-                <p className="mx-2">Settings</p>
-              </div>
+              {menuA.slice(Math.floor(menuA.length / 2)).map((menu, i) => {
+                let cur = i + 4;
+                return (
+                  <div
+                    className={`hover:text-[#00ec7aaa]  active:text-[#00ec7aea] ${"text-white"}     cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center`}
+                    onClick={() => setshowNav(true)}
+                  >
+                    <BsCalendarCheck className="mr-2" />{" "}
+                    <p className="mx-2">{menu}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -179,13 +181,13 @@ const Main2 = () => {
       </div>
 
       <section className="flex  max-md:flex-col md:mt-[171.6px] mt-[94px] h-full">
-        <MainPageMenu />
+        <MainPageMenu clickCreate={() => setpage(2)} />
 
         <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0">
           <div className="  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
             <div
               className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer "
-              ref={ref1}
+              onClick={() => setactive(1)}
             >
               <img
                 src={facebook}
@@ -197,13 +199,13 @@ const Main2 = () => {
               </p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                  hovering1 ? "bg-[#00D871]" : "bg - white"
+                  active === 1 ? "bg-[#00D871]" : "bg - white"
                 } rounded-md`}
               ></div>
             </div>
             <div
               className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer"
-              ref={ref2}
+              onClick={() => setactive(2)}
             >
               <img
                 src={Twitter}
@@ -215,13 +217,13 @@ const Main2 = () => {
               </p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                  hovering2 ? "bg-[#00D871] bg-gradient-to-r " : "bg - white"
+                  active === 2 ? "bg-[#00D871]" : "bg - white"
                 } rounded-md`}
               ></div>
             </div>
             <div
               className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer"
-              ref={ref3}
+              onClick={() => setactive(3)}
             >
               <img
                 src={Instagram}
@@ -233,11 +235,11 @@ const Main2 = () => {
               </p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                  hovering3 ? "bg-[#00D871]" : "bg - white"
+                  active === 3 ? "bg-[#00D871]" : "bg - white"
                 } rounded-md`}
               ></div>
             </div>
-            <div className=" pt-6 cursor-pointer" ref={ref4}>
+            <div className=" pt-6 cursor-pointer" onClick={() => setactive(4)}>
               {" "}
               <img
                 src={Linkdin}
@@ -249,13 +251,13 @@ const Main2 = () => {
               </p>
               <div
                 className={`mt-[0.2rem] w-full h-[0.4rem] ${
-                  hovering4 ? "bg-[#00D871]" : "bg - white"
+                  active === 4 ? "bg-[#00D871]" : "bg - white"
                 } rounded-md`}
               ></div>
             </div>
           </div>
 
-          <CreateSchedulePostLinkdin />
+          {page === 1 ? <TrendingPost /> : <UseAiInstagram />}
         </div>
       </section>
     </div>
