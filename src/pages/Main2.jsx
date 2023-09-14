@@ -6,7 +6,7 @@ import homelogo from "../assets/Main2/HomeLogo.png";
 import backButton from "../assets/Back button.svg";
 import hambugerMenu from "../assets/menu hamburger.png";
 import { useHover } from "@uidotdev/usehooks";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 import { BsCalendarCheck, BsPencilFill } from "react-icons/bs";
 
@@ -39,8 +39,10 @@ const menuA = [
 const Main2 = () => {
   const [showNav, setshowNav] = useState(true);
   const [active, setactive] = useState(3);
-  const [page, setpage] = useState(1);
+  // nav and picture menu
+  const [menu, setmenu] = useState(1);
 
+  const navigate = useNavigate();
   return (
     <div className=" md:h-screen">
       {/**nav bar */}
@@ -130,7 +132,7 @@ const Main2 = () => {
           <div className=" max-md:mb-0 flex max-md:items-center justify-center md:mt-0 mt-[1.55rem]">
             <div
               onClick={() => {
-                setpage(2);
+                navigate("/useai");
                 setshowNav(true);
               }}
               className="hover:bg-[#00ec7aaa] bg-[#00EC7B]  active:bg-[#00ec7aea]  text-white   cursor-pointer rounded-2xl pl-4 pr-9 py-2 mb-2 max-md:text-center flex items-center w-fit"
@@ -181,7 +183,11 @@ const Main2 = () => {
       </div>
 
       <section className="flex  max-md:flex-col md:mt-[171.6px] mt-[94px] h-full">
-        <MainPageMenu clickCreate={() => setpage(2)} />
+        <Routes>
+          <Route path="/" element={<MainPageMenu />} />
+          <Route path="/useai" element={<MainPageMenu />} />
+          <Route path="/useai/imagesearch" element={<MainPageImageSearch />} />
+        </Routes>
 
         <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0">
           <div className="  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
@@ -257,7 +263,11 @@ const Main2 = () => {
             </div>
           </div>
 
-          {page === 1 ? <TrendingPost /> : <UseAiInstagram />}
+          {/**routes */}
+          <Routes>
+            <Route path="/" element={<TrendingPost />} />
+            <Route path="/useai/*" element={<UseAiInstagram />} />
+          </Routes>
         </div>
       </section>
     </div>

@@ -1,4 +1,4 @@
-import search from "../../assets/search.png";
+import search from "../../assets/search.svg";
 import mainPostImage from "../../assets/mainpostimage.png";
 import profile from "../../assets/Main2/profile.jpg";
 
@@ -6,20 +6,22 @@ export default function TrendingPost() {
   return (
     <>
       {/**dextop */}
-      <div className=" w-full  bg-[#fdfdfd]  hidden md:flex">
-        <div className="flex-[34%] border-r p-5">
-          <h1 className=" text-xl font-medium text-right">Recent posts</h1>
-        </div>
-        <div className="flex-[66%] p-5">
-          {/**search */}
-          <div className=" h-11 w-80 bg-[#f6f6f6] rounded-3xl flex items-center ">
-            <img src={search} alt="" className="px-4" />
+      <div className="">
+        <h1 className="text-center text-[#151544] text-[1.25rem] font-semibold hidden md:block mt-[1.5rem]">
+          Search people or topics to get more inspiration 😍💡{" "}
+        </h1>
+        <div className=" w-full  bg-[#fdfdfd]  flex justify-center">
+          <div className=" p-5">
+            {/**search */}
+            <div className=" h-11 w-80 bg-[#f6f6f6] rounded-3xl flex items-center ">
+              <img src={search} alt="" className="px-4" />
 
-            <input
-              type="text"
-              placeholder="search"
-              className="bg-[#f6f6f6] text-[#4F4F4F]"
-            />
+              <input
+                type="text"
+                placeholder="Begin your search"
+                className="bg-[#f6f6f6] text-[#4F4F4F]"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -28,7 +30,25 @@ export default function TrendingPost() {
 
       {/**grid */}
       <div className="min-h-screen bg-[#f6f6ff]">
-        {" "}
+        <div className="flex flex-wrap py-6  pt-8  lg:px-8 px-[1rem] justify-center   space-x-3 items-center">
+          <p className="text-[#0E0E35] text-[1.25rem] font-semibold ">
+            Recent searches
+          </p>
+
+          <ul className="flex space-x-3  text-[#0E0E35] font-semibold items-center">
+            <li className="bg-[#D3D3EF] rounded-3xl cursor-pointer px-[1.62rem] py-[0.62rem]">
+              Marketing
+            </li>
+            <li className="bg-[#D3D3EF] rounded-3xl cursor-pointer px-[1.62rem] py-[0.62rem]">
+              Fashion
+            </li>
+            <li className="bg-[#D3D3EF] rounded-3xl cursor-pointer px-[1.62rem] py-[0.62rem]">
+              Design fabrics
+            </li>
+       
+          </ul>
+          
+        </div>{" "}
         <div className="flex flex-wrap py-6  pt-8  gap-9  lg:px-8 px-[1rem] justify-center  items-start">
           {/**col */}
           <div className="flex lg:flex-row flex-col">
