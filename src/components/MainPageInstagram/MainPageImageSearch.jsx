@@ -8,8 +8,8 @@ import image4 from "../../assets/Main2/asset4.png";
 
 const MainPageImageSearch = () => {
   return (
-    <div className="w-[300px] max-md:w-full max-md:relative fixed  max-md:p-0 py-8 px-[0.88rem] bg-[#151544] main-page-overflow  overflow-y-auto overflow-x-hidden mainpageMenuHeight">
-      <div className="w-32 h-10 px-[0.88rem] py-[0.62rem] bg-[#25256B] rounded-xl border border-white justify-center items-center gap-2.5 inline-flex">
+    <div className="w-[300px] max-md:w-full max-md:relative fixed  max-md:p-0 py-8 px-[0.88rem] bg-[#151544] main-page-overflow  overflow-y-auto overflow-x-hidden mainpageMenuHeight hidden md:block">
+      <div className="w-32 h-10 px-[0.88rem] py-[0.62rem] bg-[#25256B] rounded-xl border border-white justify-center items-center gap-2.5 inline-flex mt-3">
         <div className="text-white text-sm font-light">Import images</div>
       </div>
 
@@ -29,7 +29,7 @@ const MainPageImageSearch = () => {
         </span>
       </div>
 
-      <div className="flex flex-wrap gap-[0.75rem] justify-center">
+      <div className="flex flex-wrap gap-[0.75rem] justify-center my-8">
         <div className="  w-[128px] h-[12rem] flex justify-center items-center rounded-3xl bg-white ">
           <img src={image2} alt="" className="" />
         </div>

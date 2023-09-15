@@ -118,6 +118,7 @@ export default function UseAiInstagram() {
              rounded-lg text-[#07BD65] border-[1.7px] border-[#07BD65] md:p-3 p-[0.62rem] md:text-xl text-md text-center
              font-medium md:w-36 w-[7.5rem] md:h-[3.3rem] h-[3rem]
               hover:border-[#07bd65ac]  hover:text-[#07bd65a0] active:border-[#07bd65] active:text-[#07bd65]"
+              onClick={() => navigate("/useai/scheduling")}
             >
               Done
             </button>

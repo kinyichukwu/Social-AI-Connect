@@ -149,7 +149,10 @@ const Main2 = () => {
                     className={`hover:text-[#00ec7aaa]  active:text-[#00ec7aea] ${
                       i === 0 ? "text-[#00ec7aea]" : "text-white"
                     }     cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center`}
-                    onClick={() => setshowNav(true)}
+                    onClick={() => {
+                      navigate(`/${menu.toLowerCase()}`);
+                      setshowNav(true);
+                    }}
                   >
                     <BsCalendarCheck className="mr-2" />{" "}
                     <p className="mx-2">{menu}</p>
@@ -164,7 +167,10 @@ const Main2 = () => {
                 return (
                   <div
                     className={`hover:text-[#00ec7aaa]  active:text-[#00ec7aea] ${"text-white"}     cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center`}
-                    onClick={() => setshowNav(true)}
+                    onClick={() => {
+                      navigate(`/${menu.toLowerCase()}`);
+                      setshowNav(true);
+                    }}
                   >
                     <BsCalendarCheck className="mr-2" />{" "}
                     <p className="mx-2">{menu}</p>
@@ -180,12 +186,15 @@ const Main2 = () => {
             </div>
           </div>
         </div>
+
+        
       </div>
 
       <section className="flex  max-md:flex-col md:mt-[171.6px] mt-[94px] h-full">
         <Routes>
           <Route path="/" element={<MainPageMenu />} />
           <Route path="/useai" element={<MainPageMenu />} />
+          <Route path="/useai/scheduling" element={<MainPageMenu />} />
           <Route path="/useai/imagesearch" element={<MainPageImageSearch />} />
         </Routes>
 
@@ -267,6 +276,7 @@ const Main2 = () => {
           <Routes>
             <Route path="/" element={<TrendingPost />} />
             <Route path="/useai/*" element={<UseAiInstagram />} />
+            <Route path="/useai/scheduling" element={<CreateSchedulePost />} />
           </Routes>
         </div>
       </section>

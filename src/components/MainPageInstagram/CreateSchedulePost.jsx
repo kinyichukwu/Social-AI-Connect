@@ -9,30 +9,12 @@ import { MdPublish } from "react-icons/md";
 const CreateSchedulePost = () => {
   return (
     <>
-      <div className=" w-full  bg-[#fdfdfd] flex">
-        <div className="flex-[34%] border-r p-5">
-          <h1 className=" text-xl font-medium text-right">Recent posts</h1>
-        </div>
-        <div className="flex-[66%] p-5">
-          {/**search */}
-          <div className=" h-11 w-80 bg-[#f6f6f6] rounded-3xl flex items-center ">
-            <img src={search} alt="" className="px-4" />
-
-            <input
-              type="text"
-              placeholder="search"
-              className="bg-[#f6f6f6] text-[#4F4F4F]"
-            />
-          </div>
-        </div>
-      </div>
-
       {/**grid */}
       <div className="h-screen bg-[#f6f6ff]">
         {" "}
-        <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-8  lg:px-32 items-start   ">
+        <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-8  lg:px-32 items-start justify-center mx-[1rem]">
           {/**col */}
-          <div className="flex space-x-[2.5rem]">
+          <div className="flex md:space-x-[2.5rem] md:space-y-0 md:flex-row flex-col space-y-5">
             <div className="flex  flex-col">
               <div class="bg-white rounded-3xl  max-w-[25rem]  p-[1.14rem] drop-shadow-sm shadow">
                 <div class="bg-white rounded-sm max-w-md">
@@ -113,11 +95,11 @@ const CreateSchedulePost = () => {
             <div className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="57"
-                height="57"
+                width="50"
+                height="50"
                 viewBox="0 0 57 57"
                 fill="none"
-                className=" cursor-pointer"
+                className=" cursor-pointer hidden md:block"
               >
                 <path
                   d="M57 28.5C57 44.2401 44.2401 57 28.5 57C12.7599 57 0 44.2401 0 28.5C0 12.7599 12.7599 0 28.5 0C44.2401 0 57 12.7599 57 28.5Z"
@@ -128,6 +110,10 @@ const CreateSchedulePost = () => {
                   fill="white"
                 />
               </svg>
+
+              <div className="w-full bg-green-500 text-white text-[25px] font-semibold text-center rounded-3xl md:hidden">
+                +
+              </div>
             </div>
           </div>
         </div>
