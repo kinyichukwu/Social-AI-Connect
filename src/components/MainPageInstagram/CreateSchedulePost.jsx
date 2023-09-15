@@ -5,12 +5,13 @@ import profile from "../../assets/Main2/profile.jpg";
 import { PiClipboardTextFill } from "react-icons/pi";
 import { BiTimeFive } from "react-icons/bi";
 import { MdPublish } from "react-icons/md";
+import CalenderPopUp from "../Calender/CalenderPopUp";
 
 const CreateSchedulePost = () => {
   return (
     <>
       {/**grid */}
-      <div className="h-screen bg-[#f6f6ff]">
+      <div className="h-screen bg-[#f6f6ff] relative">
         {" "}
         <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-8  lg:px-32 items-start justify-center mx-[1rem]">
           {/**col */}
@@ -117,6 +118,8 @@ const CreateSchedulePost = () => {
             </div>
           </div>
         </div>
+
+        
       </div>
     </>
   );
