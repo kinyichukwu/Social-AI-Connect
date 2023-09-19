@@ -10,7 +10,6 @@ export default function CalenderPopUp() {
   const [today, setToday] = useState(currentDate);
   const [selectDate, setSelectDate] = useState(currentDate);
 
-  
   return (
     <div className="flex space-x-[1rem] sm:divide-x justify-center sm:w-1/2 h-screen items-center  fixed z-[50000] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
       <div className="w-[512px] h-[27.75rem] bg-white rounded-2xl px-[2rem] py-[1.5rem]">
