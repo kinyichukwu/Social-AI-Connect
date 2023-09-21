@@ -3,16 +3,16 @@ import "./App.css";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import HomePage from "./pages/HomePage";
-import Main2 from "./pages/Main2";
 import Calendar from "./pages/Calendar";
 import Loading from "./components/Loading/Loading";
+import MainPageInstagram from "./pages/MainPageInstagram";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/homepage" element={<HomePage />} />
-        <Route path="/*" element={<Main2 />} />
+        <Route path="/*" element={<MainPageInstagram />} />
         <Route path="/l" element={<Loading />} />
 
         <Route path="/calendar" element={<Calendar />} />

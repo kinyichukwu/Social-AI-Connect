@@ -2,11 +2,17 @@ import Instagram from "../assets/Instagram.png";
 import Linkdin from "../assets/Linkdin.png";
 import Twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook.svg";
-import homelogo from "../assets/Main2/HomeLogo.png";
+import homelogo from "../assets/MainPageInstagram/HomeLogo.png";
 import backButton from "../assets/Back button.svg";
 import hambugerMenu from "../assets/menu hamburger.png";
 import { useHover } from "@uidotdev/usehooks";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import {
+  Link,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 
 import { BsCalendarCheck, BsPencilFill } from "react-icons/bs";
 
@@ -25,6 +31,7 @@ import UseAiLinkdin from "../components/MainPageLinkdin/UseAiLinkdin";
 import CreateSchedulePostLinkdin from "../components/MainPageLinkdin/CreateSchedulePostLinkdin";
 import { useState } from "react";
 import CalenderPopUp from "../components/Calender/CalenderPopUp";
+import MainPageVideoSearch from "../components/MainPageInstagram/MainPageVideoSearch";
 
 const menuA = [
   "Your Updates",
@@ -37,16 +44,17 @@ const menuA = [
   "Settings",
 ];
 
-const Main2 = () => {
+const MainPageInstagram = () => {
   const [showNav, setshowNav] = useState(true);
   const [active, setactive] = useState(3);
   // nav and picture menu
   const [menu, setmenu] = useState(1);
 
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location.pathname === "/useai/imagesearch");
   return (
     <>
-      <CalenderPopUp />
       <div className=" md:h-screen">
         {/**nav bar */}
         <div className="fixed  top-0 z-50  w-full ">
@@ -200,9 +208,20 @@ const Main2 = () => {
               path="/useai/imagesearch"
               element={<MainPageImageSearch />}
             />
+            <Route
+              path="/useai/videosearch"
+              element={<MainPageVideoSearch />}
+            />
           </Routes>
 
-          <div className="w-full  ml-[300px] max-md:w-full max-md:ml-0">
+          <div
+            className={`w-full  ml-[300px] max-md:w-full max-md:ml-0 ${
+              location.pathname === "/useai/imagesearch" ||
+              location.pathname === "/useai/videosearch"
+                ? "hidden md:block"
+                : ""
+            }`}
+          >
             <div className="  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
               <div
                 className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer "
@@ -295,4 +314,4 @@ const Main2 = () => {
   );
 };
 
-export default Main2;
+export default MainPageInstagram;

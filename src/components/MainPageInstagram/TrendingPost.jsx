@@ -1,6 +1,6 @@
 import search from "../../assets/search.svg";
 import mainPostImage from "../../assets/mainpostimage.png";
-import profile from "../../assets/Main2/profile.jpg";
+import profile from "../../assets/MainPageInstagram/profile.jpg";
 
 export default function TrendingPost() {
   return (

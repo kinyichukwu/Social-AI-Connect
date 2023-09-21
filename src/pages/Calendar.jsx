@@ -2,7 +2,7 @@ import Instagram from "../assets/Instagram.png";
 import Linkdin from "../assets/Linkdin.png";
 import Twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook.svg";
-import homelogo from "../assets/Main2/HomeLogo.png";
+import homelogo from "../assets/MainPageInstagram/HomeLogo.png";
 import backButton from "../assets/Back button.svg";
 import hambugerMenu from "../assets/menu hamburger.png";
 import { useHover } from "@uidotdev/usehooks";
@@ -17,7 +17,7 @@ import MainPageImageSearch from "../components/MainPageInstagram/MainPageImageSe
 
 import search from "../assets/search.png";
 import mainPostImage from "../assets/mainpostimage.png";
-import profile from "../assets/Main2/profile.jpg";
+import profile from "../assets/MainPageInstagram/profile.jpg";
 import calenderImageEdit from "../assets/calender/calenderImageEdit.png";
 import calenderImage from "../assets/calender/calenderImage.png";
 import calenderIconButton from "../assets/calender/calenderIconMenu.png";
@@ -503,7 +503,6 @@ const Calendar = () => {
           <div className="min-h-screen bg-[#f6f6ff] px-[1.25rem] py-[2.6rem]">
             {" "}
             <div className=" bg-[#fff] rounded-lg">
-       
               <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-[3.31rem] md:py-[3.44rem] px-[1rem] justify-center md:justify-start   items-start">
                 <EditSchedulePost />
                 <EditSchedulePost />
@@ -520,17 +519,6 @@ const Calendar = () => {
                 <EditSchedulePost />
                 <EditSchedulePost />
                 <EditSchedulePost />
-            
-            
-            
-            
-            
-            
-            
-            
-            
-              
-              
               </div>
             </div>
           </div>

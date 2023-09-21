@@ -1,7 +1,7 @@
 import React from "react";
 import search from "../../assets/search.png";
 import mainPostImage from "../../assets/mainpostimage.png";
-import profile from "../../assets/Main2/profile.jpg";
+import profile from "../../assets/MainPageInstagram/profile.jpg";
 import { PiClipboardTextFill } from "react-icons/pi";
 import { BiTimeFive } from "react-icons/bi";
 import { MdPublish } from "react-icons/md";
@@ -92,8 +92,6 @@ const CreateSchedulePostLinkdin = () => {
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </>

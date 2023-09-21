@@ -1,17 +1,19 @@
 import { useState } from "react";
-import image from "../../assets/Main2/add image.svg";
-import video from "../../assets/Main2/add video.svg";
+import image from "../../assets/MainPageInstagram/add image.svg";
+import video from "../../assets/MainPageInstagram/add video.svg";
 import GreenButton from "../Button/GreenButton";
-import image1 from "../../assets/Main2/asset1.png";
-import image2 from "../../assets/Main2/asset2.png";
-import image3 from "../../assets/Main2/asset3.png";
-import image4 from "../../assets/Main2/asset4.png";
+import image1 from "../../assets/MainPageInstagram/asset1.png";
+import image2 from "../../assets/MainPageInstagram/asset2.png";
+import image3 from "../../assets/MainPageInstagram/asset3.png";
+import image4 from "../../assets/MainPageInstagram/asset4.png";
 import { useNavigate } from "react-router-dom";
 
 export default function UseAiInstagram() {
   const navigate = useNavigate();
   const [hashTag, sethashTag] = useState(false);
   const [showAi, setshowAi] = useState(false);
+  const [reelOption, setreelOption] = useState(false);
+
   return (
     <div className="md:px-8 px-5 py-14 bg-[#F6F6FF] h-full min-h-screen">
       <div className="flex items-start md:justify-end lg:justify-center lg:flex-row flex-col-reverse">
@@ -26,6 +28,7 @@ export default function UseAiInstagram() {
             src={video}
             alt=""
             className=" lg:translate-y-[-33px] lg:translate-x-[0] translate-x-[-33px] cursor-pointer"
+            onClick={() => navigate("/useai/videosearch")}
           />
         </div>
         <div className=" lg:w-[34rem] w-full md:px-[2.1rem] px-[1rem] py-[1.62rem] bg-white md:drop-shadow-md  rounded-3xl">

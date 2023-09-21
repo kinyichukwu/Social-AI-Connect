@@ -1,13 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import search from "../../assets/search.png";
 import mainPostImage from "../../assets/mainpostimage.png";
-import profile from "../../assets/Main2/profile.jpg";
+import profile from "../../assets/MainPageInstagram/profile.jpg";
+import reel from "../../assets/MainPageInstagram/reel.png";
+import plusInsta from "../../assets/MainPageInstagram/plusInstagram.png";
 import { PiClipboardTextFill } from "react-icons/pi";
 import { BiTimeFive } from "react-icons/bi";
 import { MdPublish } from "react-icons/md";
 import CalenderPopUp from "../Calender/CalenderPopUp";
+import { GrClose } from "react-icons/gr";
+
+const ShowReal = ({ close }) => {
+  return (
+    <div className="flex items-center justify-center flex-row md:flex-col md:space-y-4 md:space-x-0">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="50"
+        height="50"
+        viewBox="0 0 58 57"
+        fill="none"
+        onClick={close}
+        className="cursor-pointer hidden md:block"
+      >
+        <path
+          d="M49.1529 8.34746C60.2829 19.4774 60.2829 37.5226 49.1529 48.6525C38.023 59.7825 19.9778 59.7825 8.84786 48.6525C-2.28209 37.5226 -2.28209 19.4774 8.84786 8.34746C19.9778 -2.78249 38.023 -2.78248 49.1529 8.34746Z"
+          fill="#07BD65"
+        />
+        <path
+          d="M37.7865 24.0763L32.5287 29.3341L37.8606 34.666L35.7624 36.7641L30.4306 31.4323L25.1974 36.6654L23.2967 34.7647L28.5299 29.5316L23.1733 24.1751L25.2715 22.0769L30.628 27.4334L35.8858 22.1756L37.7865 24.0763Z"
+          fill="white"
+        />
+      </svg>
+
+      <div
+        className="w-full bg-green-500 text-white text-[25px] font-semibold text-center rounded-3xl md:hidden mr-3 cursor-pointer"
+        onClick={() => close()}
+      >
+        —
+      </div>
+
+      <div className=" bg-[#D3D3EF] p-[0.3rem] rounded-full cursor-pointer w-full md:w-fit mr-3">
+        <img src={reel} alt="" className="mx-auto" />
+      </div>
+
+      <div className="bg-[#D3D3EF] p-[0.3rem] rounded-full cursor-pointer  w-full md:w-fit">
+        <img src={plusInsta} alt="" className="mx-auto" />
+      </div>
+    </div>
+  );
+};
 
 const CreateSchedulePost = () => {
+  const [reelOption, setreelOption] = useState(false);
   return (
     <>
       {/**grid */}
@@ -17,11 +61,11 @@ const CreateSchedulePost = () => {
           {/**col */}
           <div className="flex md:space-x-[2.5rem] md:space-y-0 md:flex-row flex-col space-y-5">
             <div className="flex  flex-col">
-              <div class="bg-white rounded-3xl  max-w-[25rem]  p-[1.14rem] drop-shadow-sm shadow">
-                <div class="bg-white rounded-sm max-w-md">
+              <div className="bg-white rounded-3xl  max-w-[25rem]  p-[1.14rem] drop-shadow-sm shadow">
+                <div className="bg-white rounded-sm max-w-md">
                   <img src={mainPostImage} className=" max-h-[15rem] w-full" />
-                  <div class="flex items-center mt-3 mb-2 justify-center">
-                    <div class="flex ">
+                  <div className="flex items-center mt-3 mb-2 justify-center">
+                    <div className="flex ">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="7"
@@ -56,7 +100,7 @@ const CreateSchedulePost = () => {
                     </div>
                   </div>
 
-                  <div class=" text-sm  mt-2 mb-4 text-[0.8rem]">
+                  <div className=" text-sm  mt-2 mb-4 text-[0.8rem]">
                     <span className="font-semibold">Dictumst scelerisque</span>{" "}
                     ut commodo dis. Risus ac tellus sapien gravida sit elementum
                     dui eget nunc. Eu arcu montes, sit elit, maecenas feugiat.{" "}
@@ -94,32 +138,43 @@ const CreateSchedulePost = () => {
             </div>
 
             <div className="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 57 57"
-                fill="none"
-                className=" cursor-pointer hidden md:block"
-              >
-                <path
-                  d="M57 28.5C57 44.2401 44.2401 57 28.5 57C12.7599 57 0 44.2401 0 28.5C0 12.7599 12.7599 0 28.5 0C44.2401 0 57 12.7599 57 28.5Z"
-                  fill="#07BD65"
+              {reelOption ? (
+                <ShowReal
+                  close={() => setreelOption(false)}
+                  reelOption={reelOption}
                 />
-                <path
-                  d="M37.8407 31.5847H30.4051V39.1251H27.4378V31.5847H20.0371V28.8967H27.4378V21.3215H30.4051V28.8967H37.8407V31.5847Z"
-                  fill="white"
-                />
-              </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 57 57"
+                  fill="none"
+                  className=" cursor-pointer hidden md:block"
+                  onClick={() => setreelOption(true)}
+                >
+                  <path
+                    d="M57 28.5C57 44.2401 44.2401 57 28.5 57C12.7599 57 0 44.2401 0 28.5C0 12.7599 12.7599 0 28.5 0C44.2401 0 57 12.7599 57 28.5Z"
+                    fill="#07BD65"
+                  />
+                  <path
+                    d="M37.8407 31.5847H30.4051V39.1251H27.4378V31.5847H20.0371V28.8967H27.4378V21.3215H30.4051V28.8967H37.8407V31.5847Z"
+                    fill="white"
+                  />
+                </svg>
+              )}
 
-              <div className="w-full bg-green-500 text-white text-[25px] font-semibold text-center rounded-3xl md:hidden">
-                +
-              </div>
+              {!reelOption && (
+                <div
+                  className="w-full bg-green-500 text-white text-[25px] font-semibold text-center rounded-3xl md:hidden"
+                  onClick={() => setreelOption(true)}
+                >
+                  +
+                </div>
+              )}
             </div>
           </div>
         </div>
-
-        
       </div>
     </>
   );

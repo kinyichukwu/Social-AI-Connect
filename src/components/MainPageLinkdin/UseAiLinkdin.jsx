@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import image from "../../assets/Main2/add image.svg";
-import video from "../../assets/Main2/add video.svg";
-import DocumentPic from "../../assets/Main2/DocumentPic.png";
+import image from "../../assets/MainPageInstagram/add image.svg";
+import video from "../../assets/MainPageInstagram/add video.svg";
+import DocumentPic from "../../assets/MainPageInstagram/DocumentPic.png";
 import GreenButton from "../Button/GreenButton";
-import image1 from "../../assets/Main2/asset1.png";
-import image2 from "../../assets/Main2/asset2.png";
-import image3 from "../../assets/Main2/asset3.png";
-import image4 from "../../assets/Main2/asset4.png";
+import image1 from "../../assets/MainPageInstagram/asset1.png";
+import image2 from "../../assets/MainPageInstagram/asset2.png";
+import image3 from "../../assets/MainPageInstagram/asset3.png";
+import image4 from "../../assets/MainPageInstagram/asset4.png";
 
 const UseAiLinkdin = () => {
   const [hashTag, sethashTag] = useState(false);
