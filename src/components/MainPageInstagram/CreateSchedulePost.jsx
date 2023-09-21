@@ -52,9 +52,12 @@ const ShowReal = ({ close }) => {
 
 const CreateSchedulePost = () => {
   const [reelOption, setreelOption] = useState(false);
+
   return (
     <>
-      {/**grid */}
+      {/**grid
+       */}
+      <CalenderPopUp />
       <div className="h-screen bg-[#f6f6ff] relative">
         {" "}
         <div className="flex flex-wrap py-6  pt-8  gap-9  md:px-8  lg:px-32 items-start justify-center mx-[1rem]">
