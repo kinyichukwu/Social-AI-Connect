@@ -1,9 +1,54 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LeftArrow from "../assets/arrow-left.svg";
+import { useRef } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Verification = ({ fwd, bck }) => {
   const navigate = useNavigate();
+
+  const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)]; // Create refs for each input
+  const [values, setValues] = useState(["", "", "", ""]); // Store input values
+
+  useEffect(() => {
+    const focusNextInput = (index) => {
+      if (index < inputRefs.length - 1) {
+        inputRefs[index + 1].current.focus();
+      }
+    };
+
+    const handleInputChange = (index, value) => {
+      const newValues = [...values];
+      newValues[index] = value;
+      setValues(newValues);
+
+      // Automatically focus on the next input if the current input is filled
+      if (value !== "") {
+        focusNextInput(index);
+      }
+    };
+
+    // Add event listeners for each input
+    inputRefs.forEach((ref, index) => {
+      ref.current.addEventListener("input", (event) => {
+        handleInputChange(index, event.target.value);
+      });
+    });
+
+    // Remove event listeners on component unmount
+    return () => {
+      inputRefs.forEach((ref, index) => {
+        if (ref.current) {
+          // Check if ref is not null
+          ref.current.removeEventListener("input", (event) => {
+            handleInputChange(index, event.target.value);
+          });
+        }
+      });
+    };
+  }, [inputRefs, values]);
+
   return (
     <div className="flex min-h-full flex-1 flex-col px-6 py-8 lg:px-8 justify-center">
       <div className=" lg:max-w-[80%] lg:mx-[10%] flex mt-10 ">
@@ -30,24 +75,28 @@ const Verification = ({ fwd, bck }) => {
               class="flex flex-row justify-between text-center mt-2"
             >
               <input
+                ref={inputRefs[0]}
                 class="my-2 border h-16 w-16 text-center form-control rounded-xl bg-[#EAEAEA] text-xl"
                 type="text"
                 id="first"
                 maxlength="1"
               />
               <input
+                ref={inputRefs[1]}
                 class="my-2 border h-16 w-16 text-center form-control rounded-xl bg-[#EAEAEA] text-xl"
                 type="text"
                 id="second"
                 maxlength="1"
               />
               <input
+                ref={inputRefs[2]}
                 class="my-2 border h-16 w-16 text-center form-control rounded-xl bg-[#EAEAEA] text-xl"
                 type="text"
                 id="third"
                 maxlength="1"
               />
               <input
+                ref={inputRefs[3]}
                 class="my-2 border h-16 w-16 text-center form-control rounded-xl bg-[#EAEAEA] text-xl"
                 type="text"
                 id="fourth"
