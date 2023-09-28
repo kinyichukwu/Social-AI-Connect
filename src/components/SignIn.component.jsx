@@ -1,8 +1,51 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GoogleButton from "../components/Button/GoogleButton";
+import Loading from "./Loading/Loading";
+import { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-export default function SignInC({ fwd }) {
+const defaultSignupdata = {
+  email: "",
+  password: "",
+};
+
+export default function SignInC({ fwd, onSuccess, email }) {
+  const [signupdata, setSignupdata] = useState(defaultSignupdata);
+  const [loading, setloading] = useState(false);
+
+  console.log(signupdata);
+
+  const signuppost = async () => {
+    setloading(true);
+    try {
+      const res = await axios.post(
+        "https://iconnect-backend.onrender.com/login",
+        signupdata
+      );
+      const data = res.data;
+      if (data.success === false) {
+        toast.error("Wrong email or password");
+      }
+
+      if (data.success === true) {
+        toast.success("Welcome");
+        onSuccess();
+      }
+
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+
+      toast.error("Network Error");
+    } finally {
+      setloading(false);
+    }
+  };
+
+  if (loading) return <Loading />;
+
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:max-w-sm lg:max-w-[80%] lg:mx-[10%]">
@@ -21,7 +64,7 @@ export default function SignInC({ fwd }) {
         <Link
           to="/signup"
           className="font-bold leading-6 text-[#00D871] hover:text-[#00d870c8] hover:border-[#00d87087] border-2 border-[#00D871] p-2 rounded-xl"
-        >             
+        >
           Sign Up
         </Link>
       </p>
@@ -66,12 +109,22 @@ export default function SignInC({ fwd }) {
             </label>
             <div className="mt-2">
               <input
-                id="email"
                 name="email"
-                type="email"
+                type="text"
                 autoComplete="email"
                 required
-                className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#00d8709c] sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 px-3
+             text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300
+              placeholder:text-gray-400 focus:ring-2 focus:ring-inset
+               focus:ring-[#00d8709c] sm:text-sm sm:leading-6"
+                value={signupdata.email}
+                onChange={(e) => {
+                  setSignupdata(() => ({
+                    ...signupdata,
+                    [e.target.name]: e.target.value,
+                  }));
+                  email(e.target.value);
+                }}
               />
             </div>
           </div>
@@ -95,19 +148,27 @@ export default function SignInC({ fwd }) {
             </div>
             <div className="mt-2">
               <input
-                id="password"
                 name="password"
                 type="password"
                 autoComplete="current-password"
                 required
-                className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#00d8709c] sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 
+            ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset 
+            focus:ring-[#00d8709c] sm:text-sm sm:leading-6"
+                value={signupdata.password}
+                onChange={(e) =>
+                  setSignupdata(() => ({
+                    ...signupdata,
+                    [e.target.name]: e.target.value,
+                  }))
+                }
               />
             </div>
           </div>
 
           <div>
             <button
-              type="submit"
+              onClick={() => signuppost()}
               className="flex w-full justify-center rounded-md bg-[#00D871] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#00d870c8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00d870c8]"
             >
               Sign In

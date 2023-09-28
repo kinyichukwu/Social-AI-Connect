@@ -4,7 +4,7 @@ import Logo from "../assets/signup_logo.svg";
 import SignUpC from "../components/SignUp.component";
 
 const SignUp = () => {
-  
+
 
   return (
     <div className="flex min-h-full ">
@@ -33,9 +33,8 @@ const SignUp = () => {
           </p>
         </div>
       </div>
-      
-        <SignUpC />
-      
+
+      <SignUpC />
     </div>
   );
 };
