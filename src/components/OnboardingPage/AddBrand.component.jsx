@@ -1,13 +1,12 @@
 import { React, useState } from "react";
-import addbrandbutton from "../assets/add_brand.svg";
+import addbrandbutton from "../../assets/add_brand.svg";
 import Brand from "./Brand.component";
-import AddBrandForm from "./AddBrandForm.component";
-import galary from "../assets/home/galary.svg";
+import { useNavigate } from "react-router-dom";
 
 const AddBrand = () => {
-  const [brand, setBrand] = useState([]);
-  const [addbrandclicked, setaddbrandclicked] = useState(false);
-  const addbrand = (
+  const navigate = useNavigate();
+
+  return (
     <div class="flex flex-wrap my-[6rem]  gap-x-[1.5rem] justify-center md:justify-start mx-auto max-w-[67rem] px-[1.5rem]  overflow-x-hidden">
       <div class="w-[238px] h-[247px] pr-[0.30px] pt-[57px] pb-[4.55px] flex-col justify-end items-center flex">
         <div class="w-[235px] h-[239px] pt-[57px] flex-col justify-end items-center flex">
@@ -17,7 +16,7 @@ const AddBrand = () => {
                 <button
                   type="submit"
                   onClick={() => {
-                    setaddbrandclicked(true);
+                    navigate("addbrandform");
                   }}
                 >
                   <img src={addbrandbutton} alt="" className="rotate-90"></img>
@@ -38,7 +37,6 @@ const AddBrand = () => {
       <Brand />
     </div>
   );
-  return <div>{addbrandclicked ? <AddBrandForm /> : addbrand}</div>;
 };
 
 export default AddBrand;

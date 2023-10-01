@@ -1,6 +1,6 @@
 import React from "react";
-import company_logo from "../assets/company_logo.svg"
-import signuplogo from "../assets/signup_logo.svg"
+import company_logo from "../../assets/company_logo.svg"
+import signuplogo from "../../assets/signup_logo.svg"
 
 const HomePageNavBar=()=>{
 return(

@@ -1,6 +1,6 @@
 import React from "react";
-import usericon from "../assets/user.svg";
-import alerticon from "../assets/alert_icon.svg";
+import usericon from "../../assets/user.svg";
+import alerticon from "../../assets/alert_icon.svg";
 
 const WelocomeBanner = () => {
   return (

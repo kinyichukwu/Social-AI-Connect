@@ -22,13 +22,13 @@ export default function UseAiInstagram() {
             src={image}
             alt=""
             className="lg:translate-y-[-12px] lg:translate-x-[0] translate-x-[-23px] cursor-pointer"
-            onClick={() => navigate("/useai/imagesearch")}
+            onClick={() => navigate("useai/imagesearch")}
           />
           <img
             src={video}
             alt=""
             className=" lg:translate-y-[-33px] lg:translate-x-[0] translate-x-[-33px] cursor-pointer"
-            onClick={() => navigate("/useai/videosearch")}
+            onClick={() => navigate("useai/videosearch")}
           />
         </div>
         <div className=" lg:w-[34rem] w-full md:px-[2.1rem] px-[1rem] py-[1.62rem] bg-white md:drop-shadow-md  rounded-3xl">
@@ -121,7 +121,7 @@ export default function UseAiInstagram() {
              rounded-lg text-[#07BD65] border-[1.7px] border-[#07BD65] md:p-3 p-[0.62rem] md:text-xl text-md text-center
              font-medium md:w-36 w-[7.5rem] md:h-[3.3rem] h-[3rem]
               hover:border-[#07bd65ac]  hover:text-[#07bd65a0] active:border-[#07bd65] active:text-[#07bd65]"
-              onClick={() => navigate("/useai/scheduling")}
+              onClick={() => navigate("useai/scheduling")}
             >
               Done
             </button>

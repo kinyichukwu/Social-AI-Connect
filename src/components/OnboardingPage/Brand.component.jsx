@@ -1,6 +1,6 @@
 import React from "react";
-import galary from "../assets/home/galary.svg";
-import multiCircles from "../assets/home/multiCircles.svg";
+import galary from "../../assets/home/galary.svg";
+import multiCircles from "../../assets/home/multiCircles.svg";
 
 const Brand = () => {
   return (

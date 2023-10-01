@@ -1,5 +1,5 @@
 import React from "react";
-import HomePageNavBar from "./HomePageNavBar.component";
+import HomePageNavBar from "./OnboardingPage/HomePageNavBar.component";
 import homelogo from "../assets/MainPageInstagram/HomeLogo.png";
 import backButton from "../assets/Back button.svg";
 import { useState } from "react";

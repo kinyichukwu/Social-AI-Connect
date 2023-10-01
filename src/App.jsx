@@ -13,8 +13,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/homepage" element={<HomePage />} />
-        <Route path="/*" element={<MainPageInstagram />} />
+        <Route path="/homepage/*" element={<HomePage />} />
+        <Route path="/mainpageinstagram/*" element={<MainPageInstagram />} />
         <Route path="/l" element={<Loading />} />
 
         <Route path="/calendar" element={<Calendar />} />
