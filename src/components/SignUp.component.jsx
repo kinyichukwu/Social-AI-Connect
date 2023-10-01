@@ -2,8 +2,10 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
-import Loading from "./Loading/Loading";
 import { toast } from "react-toastify";
+import { ClipLoader } from "react-spinners";
+import { useContext } from "react";
+import { UserContext } from "../context/user.context";
 
 const defaultSignupdata = {
   firstName: "",
@@ -12,16 +14,16 @@ const defaultSignupdata = {
   password: "",
 };
 
-
-
 const SignUpC = () => {
   const [signupdata, setSignupdata] = useState(defaultSignupdata);
   const [loading, setloading] = useState(false);
   const navigate = useNavigate();
+  const { currentUser, setCurrentUser } = useContext(UserContext);
 
   console.log(signupdata);
 
-  const signuppost = async () => {
+  const signuppost = async (e) => {
+    e.preventDefault();
     setloading(true);
     try {
       const res = await axios.post(
@@ -29,24 +31,28 @@ const SignUpC = () => {
         signupdata
       );
 
-      if (res.success === true) {
+      const data = res.data;
+
+      if (data.success === true) {
         toast.success("Welcome to I-Connect");
         // set data to data gotten and route to unboarding
+        const { _id } = data.data;
+        setCurrentUser(_id)
+
+        // store this data in local storage
         navigate("/homepage");
       } else {
-        toast.error(res.message);
+        toast.error(data.message);
       }
 
       console.log(res);
     } catch (error) {
       console.log(error);
-      toast.error("An error occured")
+      toast.error("An error occured");
     } finally {
       setloading(false);
     }
   };
-
-  if (loading) return <Loading />;
 
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -179,10 +185,14 @@ const SignUpC = () => {
 
           <div>
             <button
-              onClick={() => signuppost()}
+              onClick={(e) => signuppost(e)}
               className="flex w-full justify-center rounded-md bg-[#00D871] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#00d870c8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00d870c8]"
             >
-              Sign up
+              {loading ? (
+                <ClipLoader size={20} color="#fff" className="text-white" />
+              ) : (
+                "Sign Up"
+              )}
             </button>
           </div>
 

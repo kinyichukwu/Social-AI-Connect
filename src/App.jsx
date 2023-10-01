@@ -8,32 +8,35 @@ import Loading from "./components/Loading/Loading";
 import MainPageInstagram from "./pages/MainPageInstagram";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UserProvider } from "./context/user.context";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/homepage/*" element={<HomePage />} />
-        <Route path="/mainpageinstagram/*" element={<MainPageInstagram />} />
-        <Route path="/l" element={<Loading />} />
+      <UserProvider>
+        <Routes>
+          <Route path="/homepage/*" element={<HomePage />} />
+          <Route path="/mainpageinstagram/*" element={<MainPageInstagram />} />
+          <Route path="/l" element={<Loading />} />
 
-        <Route path="/calendar" element={<Calendar />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup/*" element={<SignUp />} />
-      </Routes>
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup/*" element={<SignUp />} />
+        </Routes>
 
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </UserProvider>
     </BrowserRouter>
   );
 }

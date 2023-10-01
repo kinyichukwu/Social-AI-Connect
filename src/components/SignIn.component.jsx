@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GoogleButton from "../components/Button/GoogleButton";
-import Loading from "./Loading/Loading";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { ClipLoader } from "react-spinners";
+import { useContext } from "react";
+import { UserContext } from "../context/user.context";
 
 const defaultSignupdata = {
   email: "",
@@ -14,10 +16,12 @@ const defaultSignupdata = {
 export default function SignInC({ fwd, onSuccess, email }) {
   const [signupdata, setSignupdata] = useState(defaultSignupdata);
   const [loading, setloading] = useState(false);
+  const {currentUser, setCurrentUser} = useContext(UserContext)
 
   console.log(signupdata);
 
-  const signuppost = async () => {
+  const signinpost = async (e) => {
+    e.preventDefault();
     setloading(true);
     try {
       const res = await axios.post(
@@ -31,7 +35,12 @@ export default function SignInC({ fwd, onSuccess, email }) {
 
       if (data.success === true) {
         toast.success("Welcome");
+
+        const { _id } = data.data;
+        setCurrentUser(_id)
+
         onSuccess();
+
       }
 
       console.log(data);
@@ -43,8 +52,6 @@ export default function SignInC({ fwd, onSuccess, email }) {
       setloading(false);
     }
   };
-
-  if (loading) return <Loading />;
 
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -168,10 +175,14 @@ export default function SignInC({ fwd, onSuccess, email }) {
 
           <div>
             <button
-              onClick={() => signuppost()}
+              onClick={(e) => signinpost(e)}
               className="flex w-full justify-center rounded-md bg-[#00D871] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#00d870c8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00d870c8]"
             >
-              Sign In
+              {loading ? (
+                <ClipLoader size={20} color="#fff" className="text-white" />
+              ) : (
+                "Sign In"
+              )}
             </button>
           </div>
 

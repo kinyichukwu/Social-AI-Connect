@@ -4,14 +4,10 @@ import LeftArrow from "../../assets/arrow-left.svg";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-const defaultOtpdata = {
-  email: "",
-  otp: "",
-};
+
 
 const Otp = ({ fwd, bck, usersEmail }) => {
   const navigate = useNavigate();
-  const [otpData, set0tpData] = useState(defaultOtpdata);
   const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)]; // Create refs for each input
   const [values, setValues] = useState(["", "", "", ""]); // Store input values
 
@@ -53,7 +49,8 @@ const Otp = ({ fwd, bck, usersEmail }) => {
     };
   }, [inputRefs, values]);
 
-  const signuppost = async () => {
+  const signuppost = async (e) => {
+    e.preventDefault();
     setloading(true);
 
     try {
@@ -65,6 +62,16 @@ const Otp = ({ fwd, bck, usersEmail }) => {
         }
       );
       const data = res.data;
+
+      toast.success("Welcome to I-Connect");
+      // set data to data gotten and route to unboarding
+      // const { _id } = data.data;
+      // setCurrentUser(_id)
+
+      // store this data in local storage
+      navigate("/homepage");
+
+      // toast.error(data.message);
 
       console.log(data);
     } catch (error) {
@@ -143,7 +150,7 @@ const Otp = ({ fwd, bck, usersEmail }) => {
 
           <div>
             <button
-              onClick={() => {}}
+              onClick={(e) => signuppost(e)}
               className="flex w-full justify-center rounded-md bg-[#00D871] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#00d870c8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00d870c8]"
             >
               Verify Otp
