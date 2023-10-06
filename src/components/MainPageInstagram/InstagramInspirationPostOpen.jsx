@@ -1,20 +1,20 @@
+import React from "react";
 import search from "../../assets/search.svg";
 import mainPostImage from "../../assets/mainpostimage.png";
 import profile from "../../assets/MainPageInstagram/profile.jpg";
 
-export default function TrendingPost() {
-  
+const InstagramInspirationPostOpen = () => {
   return (
     <>
       {/**dextop */}
       <div className="">
-        <h1 className="text-center text-[#151544] text-[1.25rem] font-semibold hidden md:block mt-[1.5rem]">
-          Search people or topics to get more inspiration 😍💡{" "}
-        </h1>
-        <div className=" w-full  bg-[#fdfdfd]  flex justify-center">
+        <div className=" w-full  bg-[#fdfdfd]  flex  items-center  justify-between pl-[5rem]">
+          <p className=" font-normal text-[#151544] text-[1.2rem] ">
+            <span className=" font-semibold">Posts</span> Victor_finance
+          </p>
           <div className=" p-5">
             {/**search */}
-            <div className=" h-11 w-80 bg-[#f6f6f6] rounded-3xl flex items-center ">
+            <div className=" h-11 w-80 bg-[#f6f6f6] rounded-3xl flex items-center flex-1">
               <img src={search} alt="" className="px-4" />
 
               <input
@@ -24,33 +24,42 @@ export default function TrendingPost() {
               />
             </div>
           </div>
+
+          <p className=" font-normal text-[#151544] text-[1.2rem] invisible">
+            <span className=" font-semibold">Posts</span> Victor_finance
+          </p>
         </div>
       </div>
-
       {/**mobile */}
 
       {/**grid */}
-      <div className="min-h-screen bg-[#f6f6ff]">
-        <div className="flex flex-wrap py-6  pt-8  lg:px-8 px-[1rem] justify-center   space-x-3 items-center">
-          <p className="text-[#0E0E35] text-[1.25rem] font-semibold ">
-            Recent searches
+      <div className="min-h-screen bg-[#f6f6ff] flex p-[3rem] gap-[2.2rem]">
+        <div className="py-[2.25rem] rounded-xl bg-white gap-[3.5rem]  w-[35.43rem] h-[41rem] pl-[2.19rem] pr-[2.56rem]">
+          <p className="text-[#151544] text-[1.25rem] font-normal mb-[3.44rem]">
+            <span className="font-semibold">Posts</span> Victor_finance
           </p>
 
-          <ul className="flex space-x-3  text-[#0E0E35] font-semibold items-center">
-            <li className="bg-[#D3D3EF] rounded-3xl cursor-pointer px-[1.62rem] py-[0.62rem]">
-              Marketing
-            </li>
-            <li className="bg-[#D3D3EF] rounded-3xl cursor-pointer px-[1.62rem] py-[0.62rem]">
-              Fashion
-            </li>
-            <li className="bg-[#D3D3EF] rounded-3xl cursor-pointer px-[1.62rem] py-[0.62rem]">
-              Design fabrics
-            </li>
-       
-          </ul>
-          
-        </div>{" "}
-        <div className="flex flex-wrap py-6  pt-8  gap-9  lg:px-8 px-[1rem] justify-center  items-start">
+          {/** animate-pulse */}
+          <div className="">
+            <div className="flex gap-[1.31rem]">
+              <img src={profile} alt="" className="w-[7.3rem] h-[7.3rem]" />
+
+              <div class="flex-1 space-y-6 py-1 animate-pulse">
+                <div class="h-[1.5rem] bg-[#EDEDED] rounded-2xl"></div>
+                <div class="space-y-3">
+                  <div class="grid grid-cols-4 gap-4">
+                    <div class="h-[1.5rem] bg-[#EDEDED] rounded-2xl col-span-3"></div>
+                  </div>
+                  <div class="grid grid-cols-4 gap-4">
+                    <div class="h-[1.5rem] bg-[#EDEDED] rounded-2xl col-span-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap py-6  pt-8  gap-9 justify-start  items-start">
           {/**col */}
           <div className="flex lg:flex-row flex-col">
             <div class="bg-white rounded-3xl  max-w-[25rem]  p-[1.14rem] drop-shadow-sm shadow">
@@ -319,4 +328,6 @@ export default function TrendingPost() {
       </div>
     </>
   );
-}
+};
+
+export default InstagramInspirationPostOpen;

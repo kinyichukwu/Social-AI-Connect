@@ -31,6 +31,9 @@ import CreateSchedulePostLinkdin from "../components/MainPageLinkdin/CreateSched
 import { useState } from "react";
 import CalenderPopUp from "../components/Calender/CalenderPopUp";
 import MainPageVideoSearch from "../components/MainPageInstagram/MainPageVideoSearch";
+import InstagramInspiration from "../components/MainPageInstagram/InstagramInspiration";
+import InstagramInspirationPostOpen from "../components/MainPageInstagram/InstagramInspirationPostOpen";
+import InstagramPostgalary from "../components/MainPageInstagram/InstagramPostgalary";
 
 const menuA = [
   "Your Updates",
@@ -52,6 +55,8 @@ const MainPageInstagram = () => {
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location.pathname === "/useai/imagesearch");
+  console.log(location.pathname);
+
   return (
     <>
       <div className=" md:h-screen">
@@ -202,6 +207,9 @@ const MainPageInstagram = () => {
           <Routes>
             <Route path="/" element={<MainPageMenu />} />
             <Route path="/useai" element={<MainPageMenu />} />
+            <Route path="/dailyinspiration" element={<MainPageMenu />} />
+            <Route path="/dailyinspiration/post" element={<MainPageMenu />} />
+            <Route path="/gallary" element={<MainPageMenu />} />
             <Route path="/useai/scheduling" element={<MainPageMenu />} />
             <Route
               path="/useai/imagesearch"
@@ -219,9 +227,15 @@ const MainPageInstagram = () => {
               location.pathname === "/useai/videosearch"
                 ? "hidden md:block"
                 : ""
-            }`}
+            } `}
           >
-            <div className="  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ">
+            <div
+              className={`  flex justify-center items-center bg-[#ffffff]  shadow-[#00000000] drop-shadow-md ${
+                location.pathname === "/mainpageinstagram/gallary"
+                  ? "hidden"
+                  : ""
+              }`}
+            >
               <div
                 className=" pt-6 md:mr-[1.75rem] mr-[1.43rem] cursor-pointer "
                 onClick={() => setactive(1)}
@@ -305,6 +319,15 @@ const MainPageInstagram = () => {
                 path="/useai/scheduling"
                 element={<CreateSchedulePost />}
               />
+              <Route
+                path="/dailyinspiration"
+                element={<InstagramInspiration />}
+              />
+              <Route
+                path="/dailyinspiration/post"
+                element={<InstagramInspirationPostOpen />}
+              />
+              <Route path="/gallary" element={<InstagramPostgalary />} />
             </Routes>
           </div>
         </section>

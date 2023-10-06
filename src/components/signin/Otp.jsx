@@ -5,7 +5,6 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-
 const Otp = ({ fwd, bck, usersEmail }) => {
   const navigate = useNavigate();
   const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)]; // Create refs for each input
