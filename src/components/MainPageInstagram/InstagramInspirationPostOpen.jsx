@@ -34,7 +34,7 @@ const InstagramInspirationPostOpen = () => {
 
       {/**grid */}
       <div className="min-h-screen bg-[#f6f6ff] flex p-[3rem] gap-[2.2rem]">
-        <div className="py-[2.25rem] rounded-xl bg-white gap-[3.5rem]  w-[35.43rem] h-[41rem] pl-[2.19rem] pr-[2.56rem]">
+        <div className="py-[2.25rem] rounded-xl bg-white gap-[3.5rem]  w-[35.43rem] h-[41rem] pl-[2.19rem] pr-[2.56rem] fix">
           <p className="text-[#151544] text-[1.25rem] font-normal mb-[3.44rem]">
             <span className="font-semibold">Posts</span> Victor_finance
           </p>
