@@ -4,11 +4,15 @@ import LeftArrow from "../../assets/arrow-left.svg";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import axios from "axios";
+import { ClipLoader } from "react-spinners";
 
 const Otp = ({ fwd, bck, usersEmail }) => {
   const navigate = useNavigate();
   const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)]; // Create refs for each input
   const [values, setValues] = useState(["", "", "", ""]); // Store input values
+  const [loading, setloading] = useState(false);
 
   useEffect(() => {
     const focusNextInput = (index) => {
@@ -48,13 +52,14 @@ const Otp = ({ fwd, bck, usersEmail }) => {
     };
   }, [inputRefs, values]);
 
-  const signuppost = async (e) => {
-    e.preventDefault();
+  console.log(values);
+
+  const signuppost = async () => {
     setloading(true);
 
     try {
       const res = await axios.post(
-        "https://iconnect-backend.onrender.com/profile",
+        "https://iconnect-backend.onrender.com/confirm-otp",
         {
           email: usersEmail,
           otp: values.join(""),
@@ -63,6 +68,7 @@ const Otp = ({ fwd, bck, usersEmail }) => {
       const data = res.data;
 
       toast.success("Welcome to I-Connect");
+      console.log(data);
       // set data to data gotten and route to unboarding
       // const { _id } = data.data;
       // setCurrentUser(_id)
@@ -71,8 +77,6 @@ const Otp = ({ fwd, bck, usersEmail }) => {
       navigate("/homepage");
 
       // toast.error(data.message);
-
-      console.log(data);
     } catch (error) {
       console.log(error);
 
@@ -149,10 +153,15 @@ const Otp = ({ fwd, bck, usersEmail }) => {
 
           <div>
             <button
-              onClick={(e) => signuppost(e)}
+              type="button"
+              onClick={() => signuppost()}
               className="flex w-full justify-center rounded-md bg-[#00D871] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#00d870c8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00d870c8]"
             >
-              Verify Otp
+              {loading ? (
+                <ClipLoader size={20} color="#fff" className="text-white" />
+              ) : (
+                "Verify Otp"
+              )}
             </button>
           </div>
 
