@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const MainPageMenu = ({}) => {
   const navigate = useNavigate();
+
   return (
     <div className="md:w-[300px] w-full max-md:w-full max-md:relative fixed bottom-0 z-50 max-md:p-0 py-4 bg-[#151544] main-page-overflow  md:overflow-y-auto overflow-x-hidden mainpageMenuHeight c">
       <div className=" max-md:mb-0 flex max-md:items-center justify-center md:mt-0 mt-[1.55rem]">
@@ -17,12 +18,18 @@ const MainPageMenu = ({}) => {
 
       <div className=" max-md:mb-0 font-normal flex  justify-center w-fit flex-col mx-auto ">
         <div className="mt-6">
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-[#00ec7aea]   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
+          <div
+            className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-[#00ec7aea]   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal"
+            onClick={() => navigate("/mainpageinstagram/dailyinspiration")}
+          >
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">Your Updates</p>
           </div>
 
-          <div className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal">
+          <div
+            className="hover:text-[#00ec7aaa]  active:text-[#00ec7aea]  text-white   cursor-pointer rounded-2xl px-6 py-2 mb-2  max-md:text-center flex items-center font-normal"
+            onClick={() => navigate(`/mainpageinstagram`)}
+          >
             <BsCalendarCheck className="mr-2" />{" "}
             <p className="mx-2">Overview</p>
           </div>
